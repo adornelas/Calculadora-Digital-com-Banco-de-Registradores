@@ -1,0 +1,98 @@
+|Pre-Projeto
+
+
+|Pre-Projeto|somadorsubtrator:inst
+S <= mux2:inst11.saida
+A => demux2:inst8.dado
+MODO => demux2:inst8.escolha
+MODO => demux2:inst9.escolha
+MODO => demux2:inst10.escolha
+MODO => mux2:inst11.escolha
+MODO => mux2:inst12.escolha
+B => demux2:inst9.dado
+Cin => demux2:inst10.dado
+Cout <= mux2:inst12.saida
+
+
+|Pre-Projeto|somadorsubtrator:inst|mux2:inst11
+entrada0 => saida~0.DATAB
+entrada1 => saida~0.DATAA
+escolha => saida~0.OUTPUTSELECT
+saida <= saida~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somadorsubtrator:inst|somador:inst
+A => S~5.IN0
+A => S~8.IN0
+A => S~2.IN0
+A => S~0.IN0
+B => S~2.IN1
+B => S~8.IN1
+B => S~5.IN1
+B => S~0.IN1
+Cin => S~1.IN1
+Cin => S~9.IN1
+Cin => Cout~0.IN1
+Cin => Cout~1.IN1
+Cin => S~6.IN1
+Cin => S~3.IN1
+Cin => Cout~3.IN1
+S <= S~10.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somadorsubtrator:inst|demux2:inst8
+dado => saida0~0.DATAB
+dado => saida1~0.DATAB
+escolha => saida1~0.OUTPUTSELECT
+escolha => saida0~0.OUTPUTSELECT
+saida0 <= saida0~0.DB_MAX_OUTPUT_PORT_TYPE
+saida1 <= saida1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somadorsubtrator:inst|demux2:inst9
+dado => saida0~0.DATAB
+dado => saida1~0.DATAB
+escolha => saida1~0.OUTPUTSELECT
+escolha => saida0~0.OUTPUTSELECT
+saida0 <= saida0~0.DB_MAX_OUTPUT_PORT_TYPE
+saida1 <= saida1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somadorsubtrator:inst|demux2:inst10
+dado => saida0~0.DATAB
+dado => saida1~0.DATAB
+escolha => saida1~0.OUTPUTSELECT
+escolha => saida0~0.OUTPUTSELECT
+saida0 <= saida0~0.DB_MAX_OUTPUT_PORT_TYPE
+saida1 <= saida1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somadorsubtrator:inst|subtrator:inst2
+A => S~0.IN0
+A => S~8.IN0
+A => S~5.IN0
+A => S~2.IN0
+A => Bout~2.IN0
+B => S~2.IN1
+B => S~8.IN1
+B => Bout~0.IN0
+B => S~5.IN1
+B => S~0.IN1
+Bin => S~6.IN1
+Bin => S~9.IN1
+Bin => Bout~0.IN1
+Bin => Bout~2.IN1
+Bin => S~3.IN1
+Bin => S~1.IN1
+S <= S~10.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout~3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somadorsubtrator:inst|mux2:inst12
+entrada0 => saida~0.DATAB
+entrada1 => saida~0.DATAA
+escolha => saida~0.OUTPUTSELECT
+saida <= saida~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

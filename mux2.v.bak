@@ -1,0 +1,8 @@
+module(
+	input [1:0] entrada,
+	input escolha,
+	output saida
+);
+
+assign saida = entrada[escolha];
+endmodule

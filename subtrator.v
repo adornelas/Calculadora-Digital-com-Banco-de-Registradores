@@ -5,6 +5,6 @@ module subtrator(
 	output S,
 	output Bout
 );
-assign S = !A&&B&&!Bin || A&&!B&&!Bin || !A&&!B&&Bin || A&&B&&Bin;
-assign Bout = !A&&B || !A&&Bout || B&&Bout;
+assign S = A&&!B&&!Bin || !A&&B&&!Bin || !A&&!B&&Bin || A&&B&&Bin;
+assign Bout = !A&&B || B&&Bin || !A&&Bin;
 endmodule

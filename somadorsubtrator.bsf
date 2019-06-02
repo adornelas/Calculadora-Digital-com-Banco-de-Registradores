@@ -18,9 +18,9 @@ programming logic devices manufactured by Altera and sold by
 Altera or its authorized distributors.  Please refer to the 
 applicable agreement for further details.
 */
-(header "graphic" (version "1.4"))
+(header "symbol" (version "1.2"))
 (symbol
-	(rect 304 80 432 208)
+	(rect 16 16 144 144)
 	(text "somadorsubtrator" (rect 5 0 108 12)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 114 25 124)(font "Arial" ))
 	(port
