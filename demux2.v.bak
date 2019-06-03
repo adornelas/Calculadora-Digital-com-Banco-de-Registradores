@@ -1,8 +1,0 @@
-module demix2(
-	input dado
-	input escolha
-	output [1:0] saida
-);
-
-assign saida[0] = escolha==4'd0 ? dado : 1'b0;
-assign saida[1] = escolha ==4	d1 ? dado : 1'b0;
