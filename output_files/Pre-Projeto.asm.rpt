@@ -1,5 +1,5 @@
 Assembler report for Pre-Projeto
-Thu Jun  6 15:33:35 2019
+Thu Jun  6 18:46:16 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Jun  6 15:33:35 2019 ;
+; Assembler Status      ; Successful - Thu Jun  6 18:46:16 2019 ;
 ; Revision Name         ; Pre-Projeto                           ;
 ; Top-level Entity Name ; Pre-Projeto                           ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                  ;
 +----------------+--------------------------+
 ; Device         ; EP2C35F672C6             ;
-; JTAG usercode  ; 0x00303126               ;
-; Checksum       ; 0x00303126               ;
+; JTAG usercode  ; 0x002FB6C9               ;
+; Checksum       ; 0x002FB6C9               ;
 +----------------+--------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+----------------------+
 ; Device             ; EPCS16               ;
 ; JTAG usercode      ; 0x00000000           ;
-; Checksum           ; 0x1C771234           ;
+; Checksum           ; 0x1C77E61C           ;
 ; Compression Ratio  ; 3                    ;
 +--------------------+----------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun  6 15:33:32 2019
+    Info: Processing started: Thu Jun  6 18:46:12 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Pre-Projeto -c Pre-Projeto
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 338 megabytes
-    Info: Processing ended: Thu Jun  6 15:33:35 2019
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Thu Jun  6 18:46:16 2019
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

@@ -17,16 +17,6 @@ SW[12] => somsub:inst.B[4]
 SW[13] => somsub:inst.B[5]
 SW[14] => somsub:inst.B[6]
 SW[15] => somsub:inst.B[7]
-LSD[0] <= conversorbinbcd:inst8.LSD[0]
-LSD[1] <= conversorbinbcd:inst8.LSD[1]
-LSD[2] <= conversorbinbcd:inst8.LSD[2]
-LSD[3] <= conversorbinbcd:inst8.LSD[3]
-MIDDLE[0] <= conversorbinbcd:inst8.MIDDLE[0]
-MIDDLE[1] <= conversorbinbcd:inst8.MIDDLE[1]
-MIDDLE[2] <= conversorbinbcd:inst8.MIDDLE[2]
-MIDDLE[3] <= conversorbinbcd:inst8.MIDDLE[3]
-MSD[0] <= conversorbinbcd:inst8.MSD[0]
-MSD[1] <= conversorbinbcd:inst8.MSD[1]
 
 
 |Pre-Projeto|somsub:inst1
@@ -567,7 +557,21 @@ escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|conversorbinbcd:inst8
+|Pre-Projeto|decoder7:inst10
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|conversorbinbcd:inst7
 LSD[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 LSD[1] <= 74185:inst1.Y1
 LSD[2] <= 74185:inst1.Y2
@@ -588,7 +592,7 @@ MSD[0] <= 74185:inst2.Y5
 MSD[1] <= 74185:inst2.Y4
 
 
-|Pre-Projeto|conversorbinbcd:inst8|74185:inst1
+|Pre-Projeto|conversorbinbcd:inst7|74185:inst1
 Y1 <= 41.DB_MAX_OUTPUT_PORT_TYPE
 A => 56.IN0
 A => 29.IN0
@@ -697,7 +701,7 @@ Y7 <= <VCC>
 Y8 <= <VCC>
 
 
-|Pre-Projeto|conversorbinbcd:inst8|74185:inst
+|Pre-Projeto|conversorbinbcd:inst7|74185:inst
 Y1 <= 41.DB_MAX_OUTPUT_PORT_TYPE
 A => 56.IN0
 A => 29.IN0
@@ -806,7 +810,7 @@ Y7 <= <VCC>
 Y8 <= <VCC>
 
 
-|Pre-Projeto|conversorbinbcd:inst8|74185:inst2
+|Pre-Projeto|conversorbinbcd:inst7|74185:inst2
 Y1 <= 41.DB_MAX_OUTPUT_PORT_TYPE
 A => 56.IN0
 A => 29.IN0
@@ -1004,5 +1008,33 @@ entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|decoder7:inst8
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|decoder7:inst9
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
