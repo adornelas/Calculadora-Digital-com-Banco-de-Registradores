@@ -1,55 +1,86 @@
 |Pre-Projeto
-S0 <= somador:inst.S
-A0 => somador:inst.A
-B0 => mux2:inst8.entrada0
-B0 => inst17.IN0
-Cin => mux2:inst8.escolha
-Cin => somador:inst.Cin
-Cin => mux2:inst10.escolha
-Cin => mux2:inst11.escolha
-Cin => mux2:inst12.escolha
-Cin => mux2:inst13.escolha
-Cin => mux2:inst14.escolha
-Cin => mux2:inst15.escolha
-Cin => mux2:inst16.escolha
-S1 <= somador:inst1.S
-A1 => somador:inst1.A
-B1 => mux2:inst10.entrada0
-B1 => inst18.IN0
-S2 <= somador:inst2.S
-A2 => somador:inst2.A
-B2 => mux2:inst11.entrada0
-B2 => inst19.IN0
-S3 <= somador:inst3.S
-A3 => somador:inst3.A
-B3 => mux2:inst12.entrada0
-B3 => inst20.IN0
-S4 <= somador:inst4.S
-A4 => somador:inst4.A
-B4 => mux2:inst13.entrada0
-B4 => inst21.IN0
-S5 <= somador:inst5.S
-A5 => somador:inst5.A
-B5 => mux2:inst14.entrada0
-B5 => inst22.IN0
-S6 <= somador:inst6.S
-A6 => somador:inst6.A
-B6 => mux2:inst15.entrada0
-B6 => inst23.IN0
-S7 <= somador:inst7.S
-A7 => somador:inst7.A
-B7 => mux2:inst16.entrada0
-B7 => inst24.IN0
+OVERFLOW <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+CINSW => somsub:inst.Cin
+SW[0] => somsub:inst.A[0]
+SW[1] => somsub:inst.A[1]
+SW[2] => somsub:inst.A[2]
+SW[3] => somsub:inst.A[3]
+SW[4] => somsub:inst.A[4]
+SW[5] => somsub:inst.A[5]
+SW[6] => somsub:inst.A[6]
+SW[7] => somsub:inst.A[7]
+SW[8] => somsub:inst.B[0]
+SW[9] => somsub:inst.B[1]
+SW[10] => somsub:inst.B[2]
+SW[11] => somsub:inst.B[3]
+SW[12] => somsub:inst.B[4]
+SW[13] => somsub:inst.B[5]
+SW[14] => somsub:inst.B[6]
+SW[15] => somsub:inst.B[7]
+SA[0] <= <GND>
+SA[1] <= <GND>
+SA[2] <= <GND>
+SA[3] <= <GND>
+SA[4] <= <GND>
+SA[5] <= <GND>
+SA[6] <= <GND>
+SA[7] <= <GND>
+
+
+|Pre-Projeto|somsub:inst1
 OVERFLOW <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => somador:inst3.A
+A[1] => somador:inst1.A
+A[2] => somador:inst2.A
+A[3] => somador:inst4.A
+A[4] => somador:inst5.A
+A[5] => somador:inst6.A
+A[6] => somador:inst7.A
+A[7] => somador:inst8.A
+B[0] => mux2:inst9.entrada0
+B[0] => inst21.IN0
+B[1] => mux2:inst10.entrada0
+B[1] => inst22.IN0
+B[2] => mux2:inst11.entrada0
+B[2] => inst23.IN0
+B[3] => mux2:inst12.entrada0
+B[3] => inst24.IN0
+B[4] => mux2:inst13.entrada0
+B[4] => inst25.IN0
+B[5] => mux2:inst18.entrada0
+B[5] => inst26.IN0
+B[6] => mux2:inst19.entrada0
+B[6] => inst27.IN0
+B[7] => mux2:inst20.entrada0
+B[7] => inst28.IN0
+Cin => mux2:inst19.escolha
+Cin => mux2:inst18.escolha
+Cin => mux2:inst13.escolha
+Cin => mux2:inst12.escolha
+Cin => mux2:inst11.escolha
+Cin => mux2:inst10.escolha
+Cin => mux2:inst9.escolha
+Cin => somador:inst3.Cin
+Cin => mux2:inst20.escolha
+S[0] <= somador:inst3.S
+S[1] <= somador:inst1.S
+S[2] <= somador:inst2.S
+S[3] <= somador:inst4.S
+S[4] <= somador:inst5.S
+S[5] <= somador:inst6.S
+S[6] <= somador:inst7.S
+S[7] <= somador:inst8.S
 
 
-|Pre-Projeto|somador:inst
+|Pre-Projeto|somsub:inst1|somador:inst7
 A => S.IN0
 A => S.IN0
+A => Cout.IN0
 A => S.IN0
 A => S.IN0
 B => S.IN1
 B => S.IN1
+B => Cout.IN0
 B => S.IN1
 B => S.IN1
 Cin => S.IN1
@@ -58,25 +89,26 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 Cin => S.IN1
 Cin => S.IN1
-Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|mux2:inst8
+|Pre-Projeto|somsub:inst1|mux2:inst19
 entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|somador:inst1
+|Pre-Projeto|somsub:inst1|somador:inst6
 A => S.IN0
 A => S.IN0
+A => Cout.IN0
 A => S.IN0
 A => S.IN0
 B => S.IN1
 B => S.IN1
+B => Cout.IN0
 B => S.IN1
 B => S.IN1
 Cin => S.IN1
@@ -85,25 +117,26 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 Cin => S.IN1
 Cin => S.IN1
-Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|mux2:inst10
+|Pre-Projeto|somsub:inst1|mux2:inst18
 entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|somador:inst2
+|Pre-Projeto|somsub:inst1|somador:inst5
 A => S.IN0
 A => S.IN0
+A => Cout.IN0
 A => S.IN0
 A => S.IN0
 B => S.IN1
 B => S.IN1
+B => Cout.IN0
 B => S.IN1
 B => S.IN1
 Cin => S.IN1
@@ -112,25 +145,26 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 Cin => S.IN1
 Cin => S.IN1
-Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|mux2:inst11
+|Pre-Projeto|somsub:inst1|mux2:inst13
 entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|somador:inst3
+|Pre-Projeto|somsub:inst1|somador:inst4
 A => S.IN0
 A => S.IN0
+A => Cout.IN0
 A => S.IN0
 A => S.IN0
 B => S.IN1
 B => S.IN1
+B => Cout.IN0
 B => S.IN1
 B => S.IN1
 Cin => S.IN1
@@ -139,25 +173,26 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 Cin => S.IN1
 Cin => S.IN1
-Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|mux2:inst12
+|Pre-Projeto|somsub:inst1|mux2:inst12
 entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|somador:inst4
+|Pre-Projeto|somsub:inst1|somador:inst2
 A => S.IN0
 A => S.IN0
+A => Cout.IN0
 A => S.IN0
 A => S.IN0
 B => S.IN1
 B => S.IN1
+B => Cout.IN0
 B => S.IN1
 B => S.IN1
 Cin => S.IN1
@@ -166,25 +201,26 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 Cin => S.IN1
 Cin => S.IN1
-Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|mux2:inst13
+|Pre-Projeto|somsub:inst1|mux2:inst11
 entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|somador:inst5
+|Pre-Projeto|somsub:inst1|somador:inst1
 A => S.IN0
 A => S.IN0
+A => Cout.IN0
 A => S.IN0
 A => S.IN0
 B => S.IN1
 B => S.IN1
+B => Cout.IN0
 B => S.IN1
 B => S.IN1
 Cin => S.IN1
@@ -193,25 +229,26 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 Cin => S.IN1
 Cin => S.IN1
-Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|mux2:inst14
+|Pre-Projeto|somsub:inst1|mux2:inst10
 entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|somador:inst6
+|Pre-Projeto|somsub:inst1|somador:inst3
 A => S.IN0
 A => S.IN0
+A => Cout.IN0
 A => S.IN0
 A => S.IN0
 B => S.IN1
 B => S.IN1
+B => Cout.IN0
 B => S.IN1
 B => S.IN1
 Cin => S.IN1
@@ -220,25 +257,26 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 Cin => S.IN1
 Cin => S.IN1
-Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|mux2:inst15
+|Pre-Projeto|somsub:inst1|mux2:inst9
 entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|somador:inst7
+|Pre-Projeto|somsub:inst1|somador:inst8
 A => S.IN0
 A => S.IN0
+A => Cout.IN0
 A => S.IN0
 A => S.IN0
 B => S.IN1
 B => S.IN1
+B => Cout.IN0
 B => S.IN1
 B => S.IN1
 Cin => S.IN1
@@ -247,12 +285,371 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 Cin => S.IN1
 Cin => S.IN1
-Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|mux2:inst16
+|Pre-Projeto|somsub:inst1|mux2:inst20
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst
+OVERFLOW <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => somador:inst3.A
+A[1] => somador:inst1.A
+A[2] => somador:inst2.A
+A[3] => somador:inst4.A
+A[4] => somador:inst5.A
+A[5] => somador:inst6.A
+A[6] => somador:inst7.A
+A[7] => somador:inst8.A
+B[0] => mux2:inst9.entrada0
+B[0] => inst21.IN0
+B[1] => mux2:inst10.entrada0
+B[1] => inst22.IN0
+B[2] => mux2:inst11.entrada0
+B[2] => inst23.IN0
+B[3] => mux2:inst12.entrada0
+B[3] => inst24.IN0
+B[4] => mux2:inst13.entrada0
+B[4] => inst25.IN0
+B[5] => mux2:inst18.entrada0
+B[5] => inst26.IN0
+B[6] => mux2:inst19.entrada0
+B[6] => inst27.IN0
+B[7] => mux2:inst20.entrada0
+B[7] => inst28.IN0
+Cin => mux2:inst19.escolha
+Cin => mux2:inst18.escolha
+Cin => mux2:inst13.escolha
+Cin => mux2:inst12.escolha
+Cin => mux2:inst11.escolha
+Cin => mux2:inst10.escolha
+Cin => mux2:inst9.escolha
+Cin => somador:inst3.Cin
+Cin => mux2:inst20.escolha
+S[0] <= somador:inst3.S
+S[1] <= somador:inst1.S
+S[2] <= somador:inst2.S
+S[3] <= somador:inst4.S
+S[4] <= somador:inst5.S
+S[5] <= somador:inst6.S
+S[6] <= somador:inst7.S
+S[7] <= somador:inst8.S
+
+
+|Pre-Projeto|somsub:inst|somador:inst7
+A => S.IN0
+A => S.IN0
+A => Cout.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => Cout.IN0
+B => S.IN1
+B => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|mux2:inst19
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|somador:inst6
+A => S.IN0
+A => S.IN0
+A => Cout.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => Cout.IN0
+B => S.IN1
+B => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|mux2:inst18
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|somador:inst5
+A => S.IN0
+A => S.IN0
+A => Cout.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => Cout.IN0
+B => S.IN1
+B => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|mux2:inst13
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|somador:inst4
+A => S.IN0
+A => S.IN0
+A => Cout.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => Cout.IN0
+B => S.IN1
+B => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|mux2:inst12
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|somador:inst2
+A => S.IN0
+A => S.IN0
+A => Cout.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => Cout.IN0
+B => S.IN1
+B => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|mux2:inst11
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|somador:inst1
+A => S.IN0
+A => S.IN0
+A => Cout.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => Cout.IN0
+B => S.IN1
+B => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|mux2:inst10
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|somador:inst3
+A => S.IN0
+A => S.IN0
+A => Cout.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => Cout.IN0
+B => S.IN1
+B => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|mux2:inst9
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|somador:inst8
+A => S.IN0
+A => S.IN0
+A => Cout.IN0
+A => S.IN0
+A => S.IN0
+B => S.IN1
+B => S.IN1
+B => Cout.IN0
+B => S.IN1
+B => S.IN1
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cin => S.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|somsub:inst|mux2:inst20
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|mux2barramento:inst6
+SAIDA[0] <= mux2:inst.saida
+SAIDA[1] <= mux2:inst1.saida
+SAIDA[2] <= mux2:inst2.saida
+SAIDA[3] <= mux2:inst3.saida
+SAIDA[4] <= mux2:inst4.saida
+SAIDA[5] <= mux2:inst5.saida
+SAIDA[6] <= mux2:inst6.saida
+SAIDA[7] <= mux2:inst7.saida
+ENTRADA0[0] => mux2:inst.entrada0
+ENTRADA0[1] => mux2:inst1.entrada0
+ENTRADA0[2] => mux2:inst2.entrada0
+ENTRADA0[3] => mux2:inst3.entrada0
+ENTRADA0[4] => mux2:inst4.entrada0
+ENTRADA0[5] => mux2:inst5.entrada0
+ENTRADA0[6] => mux2:inst6.entrada0
+ENTRADA0[7] => mux2:inst7.entrada0
+ENTRADA1[0] => mux2:inst.entrada1
+ENTRADA1[1] => mux2:inst1.entrada1
+ENTRADA1[2] => mux2:inst2.entrada1
+ENTRADA1[3] => mux2:inst3.entrada1
+ENTRADA1[4] => mux2:inst4.entrada1
+ENTRADA1[5] => mux2:inst5.entrada1
+ENTRADA1[6] => mux2:inst6.entrada1
+ENTRADA1[7] => mux2:inst7.entrada1
+ESCOLHA => mux2:inst.escolha
+ESCOLHA => mux2:inst1.escolha
+ESCOLHA => mux2:inst2.escolha
+ESCOLHA => mux2:inst3.escolha
+ESCOLHA => mux2:inst4.escolha
+ESCOLHA => mux2:inst5.escolha
+ESCOLHA => mux2:inst6.escolha
+ESCOLHA => mux2:inst7.escolha
+
+
+|Pre-Projeto|mux2barramento:inst6|mux2:inst
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|mux2barramento:inst6|mux2:inst1
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|mux2barramento:inst6|mux2:inst2
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|mux2barramento:inst6|mux2:inst3
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|mux2barramento:inst6|mux2:inst4
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|mux2barramento:inst6|mux2:inst5
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|mux2barramento:inst6|mux2:inst6
+entrada0 => saida.DATAB
+entrada1 => saida.DATAA
+escolha => saida.OUTPUTSELECT
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|mux2barramento:inst6|mux2:inst7
 entrada0 => saida.DATAB
 entrada1 => saida.DATAA
 escolha => saida.OUTPUTSELECT

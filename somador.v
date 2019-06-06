@@ -6,5 +6,5 @@ module somador(
 	output Cout
 );
 assign S = !A&&!B&&Cin || !A&&B&&!Cin || A&&!B&&!Cin || A&&B&&Cin;
-assign Cout = !A&&B&&Cin || A&&!B&&Cin || A&&B&&!Cin || A&&B&&Cin;
+assign Cout = A&&Cin || B&&Cin || A&&B;
 endmodule

@@ -1,0 +1,78 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 184 176)
+	(text "conversorbinbcd" (rect 5 0 101 12)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 146 25 156)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "B[7..0]" (rect 0 0 38 12)(font "Arial" (font_size 8)))
+		(text "B[7..0]" (rect 21 27 59 39)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "LSD[3]" (rect 0 0 41 12)(font "Arial" (font_size 8)))
+		(text "LSD[3]" (rect 106 27 147 39)(font "Arial" (font_size 8)))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "LSD[0]" (rect 0 0 41 12)(font "Arial" (font_size 8)))
+		(text "LSD[0]" (rect 106 43 147 55)(font "Arial" (font_size 8)))
+		(line (pt 168 48)(pt 152 48))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "LSD[1]" (rect 0 0 41 12)(font "Arial" (font_size 8)))
+		(text "LSD[1]" (rect 106 59 147 71)(font "Arial" (font_size 8)))
+		(line (pt 168 64)(pt 152 64))
+	)
+	(port
+		(pt 168 80)
+		(output)
+		(text "LSD[2]" (rect 0 0 41 12)(font "Arial" (font_size 8)))
+		(text "LSD[2]" (rect 106 75 147 87)(font "Arial" (font_size 8)))
+		(line (pt 168 80)(pt 152 80))
+	)
+	(port
+		(pt 168 96)
+		(output)
+		(text "MIDDLE[3..0]" (rect 0 0 79 12)(font "Arial" (font_size 8)))
+		(text "MIDDLE[3..0]" (rect 68 91 147 103)(font "Arial" (font_size 8)))
+		(line (pt 168 96)(pt 152 96)(line_width 3))
+	)
+	(port
+		(pt 168 112)
+		(output)
+		(text "MSD[1..0]" (rect 0 0 59 12)(font "Arial" (font_size 8)))
+		(text "MSD[1..0]" (rect 88 107 147 119)(font "Arial" (font_size 8)))
+		(line (pt 168 112)(pt 152 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 144))
+	)
+)

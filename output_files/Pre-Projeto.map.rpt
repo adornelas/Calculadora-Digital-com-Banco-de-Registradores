@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Pre-Projeto
-Sun Jun  2 22:31:32 2019
+Thu Jun  6 12:05:15 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,12 +10,7 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,20 +36,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun  2 22:31:32 2019           ;
+; Analysis & Synthesis Status        ; Failed - Thu Jun  6 12:05:15 2019               ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Pre-Projeto                                     ;
 ; Top-level Entity Name              ; Pre-Projeto                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 20                                              ;
-;     Total combinational functions  ; 20                                              ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 26                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -155,117 +150,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; mux2.v                           ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/mux2.v          ;         ;
-; Pre-Projeto.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/Pre-Projeto.bdf ;         ;
-; somador.v                        ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/somador.v       ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 20    ;
-;                                             ;       ;
-; Total combinational functions               ; 20    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 14    ;
-;     -- 3 input functions                    ; 3     ;
-;     -- <=2 input functions                  ; 3     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 20    ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 26    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; Cin   ;
-; Maximum fan-out                             ; 15    ;
-; Total fan-out                               ; 80    ;
-; Average fan-out                             ; 1.74  ;
-+---------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; |Pre-Projeto               ; 20 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |Pre-Projeto               ; work         ;
-;    |somador:inst1|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somador:inst1 ; work         ;
-;    |somador:inst2|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somador:inst2 ; work         ;
-;    |somador:inst3|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somador:inst3 ; work         ;
-;    |somador:inst4|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somador:inst4 ; work         ;
-;    |somador:inst5|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somador:inst5 ; work         ;
-;    |somador:inst6|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somador:inst6 ; work         ;
-;    |somador:inst7|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somador:inst7 ; work         ;
-;    |somador:inst|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somador:inst  ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Jun  2 22:31:30 2019
+    Info: Processing started: Thu Jun  6 12:05:14 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pre-Projeto -c Pre-Projeto
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file mux2.v
-    Info (12023): Found entity 1: mux2
 Info (12021): Found 1 design units, including 1 entities, in source file Pre-Projeto.bdf
     Info (12023): Found entity 1: Pre-Projeto
+Info (12021): Found 1 design units, including 1 entities, in source file mux2.v
+    Info (12023): Found entity 1: mux2
 Info (12021): Found 1 design units, including 1 entities, in source file somador.v
     Info (12023): Found entity 1: somador
+Info (12021): Found 1 design units, including 1 entities, in source file somsub.bdf
+    Info (12023): Found entity 1: somsub
+Info (12021): Found 1 design units, including 1 entities, in source file mux2barramento.bdf
+    Info (12023): Found entity 1: mux2barramento
+Info (12021): Found 1 design units, including 1 entities, in source file conversorbinbcd.bdf
+    Info (12023): Found entity 1: conversorbinbcd
 Info (12127): Elaborating entity "Pre-Projeto" for the top level hierarchy
-Info (12128): Elaborating entity "somador" for hierarchy "somador:inst"
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:inst8"
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 46 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 17 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 20 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Sun Jun  2 22:31:32 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info (12128): Elaborating entity "somsub" for hierarchy "somsub:inst1"
+Info (12128): Elaborating entity "somador" for hierarchy "somsub:inst1|somador:inst7"
+Info (12128): Elaborating entity "mux2" for hierarchy "somsub:inst1|mux2:inst19"
+Info (12128): Elaborating entity "conversorbinbcd" for hierarchy "conversorbinbcd:inst7"
+Error (275021): Illegal wire or bus name " " of type signal 
+Error (275021): Illegal wire or bus name " " of type signal 
+Error (12152): Can't elaborate user hierarchy "conversorbinbcd:inst7"
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
+    Error: Peak virtual memory: 339 megabytes
+    Error: Processing ended: Thu Jun  6 12:05:15 2019
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
 
 
