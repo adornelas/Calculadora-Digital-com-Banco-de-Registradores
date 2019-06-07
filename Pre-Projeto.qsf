@@ -64,8 +64,11 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Simu.vwf
 set_global_assignment -name BDF_FILE mux2barramento.bdf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "/home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/Simu.vwf"
 set_global_assignment -name BDF_FILE conversorbinbcd.bdf
+set_global_assignment -name VERILOG_FILE decodificadordisplay.v
+set_global_assignment -name BDF_FILE displaynegativo.bdf
+set_global_assignment -name BDF_FILE displayerro.bdf
+set_global_assignment -name BDF_FILE zeradisplay.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE decodificadordisplay.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

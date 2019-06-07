@@ -1,6 +1,11 @@
 |Pre-Projeto
-OVERFLOW <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-CINSW => somsub:inst.Cin
+AHEX0[0] <= displayerro:inst17.S0[0]
+AHEX0[1] <= displayerro:inst17.S0[1]
+AHEX0[2] <= displayerro:inst17.S0[2]
+AHEX0[3] <= displayerro:inst17.S0[3]
+AHEX0[4] <= displayerro:inst17.S0[4]
+AHEX0[5] <= displayerro:inst17.S0[5]
+AHEX0[6] <= displayerro:inst17.S0[6]
 SW[0] => somsub:inst.A[0]
 SW[1] => somsub:inst.A[1]
 SW[2] => somsub:inst.A[2]
@@ -17,6 +22,88 @@ SW[12] => somsub:inst.B[4]
 SW[13] => somsub:inst.B[5]
 SW[14] => somsub:inst.B[6]
 SW[15] => somsub:inst.B[7]
+SW[16] => somsub:inst.Cin
+AHEX1[0] <= displayerro:inst17.S1[0]
+AHEX1[1] <= displayerro:inst17.S1[1]
+AHEX1[2] <= displayerro:inst17.S1[2]
+AHEX1[3] <= displayerro:inst17.S1[3]
+AHEX1[4] <= displayerro:inst17.S1[4]
+AHEX1[5] <= displayerro:inst17.S1[5]
+AHEX1[6] <= displayerro:inst17.S1[6]
+AHEX2[0] <= displayerro:inst17.S2[0]
+AHEX2[1] <= displayerro:inst17.S2[1]
+AHEX2[2] <= displayerro:inst17.S2[2]
+AHEX2[3] <= displayerro:inst17.S2[3]
+AHEX2[4] <= displayerro:inst17.S2[4]
+AHEX2[5] <= displayerro:inst17.S2[5]
+AHEX2[6] <= displayerro:inst17.S2[6]
+AHEX3[0] <= displayerro:inst17.S3[0]
+AHEX3[1] <= displayerro:inst17.S3[1]
+AHEX3[2] <= displayerro:inst17.S3[2]
+AHEX3[3] <= displayerro:inst17.S3[3]
+AHEX3[4] <= displayerro:inst17.S3[4]
+AHEX3[5] <= displayerro:inst17.S3[5]
+AHEX3[6] <= displayerro:inst17.S3[6]
+HEX0[0] <= decoder7:inst8.Out[0]
+HEX0[1] <= decoder7:inst8.Out[1]
+HEX0[2] <= decoder7:inst8.Out[2]
+HEX0[3] <= decoder7:inst8.Out[3]
+HEX0[4] <= decoder7:inst8.Out[4]
+HEX0[5] <= decoder7:inst8.Out[5]
+HEX0[6] <= decoder7:inst8.Out[6]
+HEX1[0] <= decoder7:inst9.Out[0]
+HEX1[1] <= decoder7:inst9.Out[1]
+HEX1[2] <= decoder7:inst9.Out[2]
+HEX1[3] <= decoder7:inst9.Out[3]
+HEX1[4] <= decoder7:inst9.Out[4]
+HEX1[5] <= decoder7:inst9.Out[5]
+HEX1[6] <= decoder7:inst9.Out[6]
+HEX2[0] <= decoder7:inst10.Out[0]
+HEX2[1] <= decoder7:inst10.Out[1]
+HEX2[2] <= decoder7:inst10.Out[2]
+HEX2[3] <= decoder7:inst10.Out[3]
+HEX2[4] <= decoder7:inst10.Out[4]
+HEX2[5] <= decoder7:inst10.Out[5]
+HEX2[6] <= decoder7:inst10.Out[6]
+HEX3[0] <= displaynegativo:inst16.S[0]
+HEX3[1] <= displaynegativo:inst16.S[1]
+HEX3[2] <= displaynegativo:inst16.S[2]
+HEX3[3] <= displaynegativo:inst16.S[3]
+HEX3[4] <= displaynegativo:inst16.S[4]
+HEX3[5] <= displaynegativo:inst16.S[5]
+HEX3[6] <= displaynegativo:inst16.S[6]
+
+
+|Pre-Projeto|displayerro:inst17
+S0[0] <= <GND>
+S0[1] <= <GND>
+S0[2] <= <GND>
+S0[3] <= inst110.DB_MAX_OUTPUT_PORT_TYPE
+S0[4] <= inst111.DB_MAX_OUTPUT_PORT_TYPE
+S0[5] <= inst112.DB_MAX_OUTPUT_PORT_TYPE
+S0[6] <= inst113.DB_MAX_OUTPUT_PORT_TYPE
+OVERFLOW => inst.IN1
+S1[0] <= <GND>
+S1[1] <= <GND>
+S1[2] <= <GND>
+S1[3] <= inst108.DB_MAX_OUTPUT_PORT_TYPE
+S1[4] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+S1[5] <= <GND>
+S1[6] <= <GND>
+S2[0] <= <GND>
+S2[1] <= <GND>
+S2[2] <= <GND>
+S2[3] <= inst106.DB_MAX_OUTPUT_PORT_TYPE
+S2[4] <= inst65.DB_MAX_OUTPUT_PORT_TYPE
+S2[5] <= <GND>
+S2[6] <= <GND>
+S3[0] <= inst101.DB_MAX_OUTPUT_PORT_TYPE
+S3[1] <= inst102.DB_MAX_OUTPUT_PORT_TYPE
+S3[2] <= <GND>
+S3[3] <= inst103.DB_MAX_OUTPUT_PORT_TYPE
+S3[4] <= inst104.DB_MAX_OUTPUT_PORT_TYPE
+S3[5] <= <GND>
+S3[6] <= inst105.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Pre-Projeto|somsub:inst1
@@ -557,7 +644,7 @@ escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|decoder7:inst10
+|Pre-Projeto|decoder7:inst8
 In[0] => Decoder0.IN3
 In[1] => Decoder0.IN2
 In[2] => Decoder0.IN1
@@ -571,7 +658,7 @@ Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|conversorbinbcd:inst7
+|Pre-Projeto|conversorbinbcd:inst21
 LSD[0] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 LSD[1] <= 74185:inst1.Y1
 LSD[2] <= 74185:inst1.Y2
@@ -590,9 +677,11 @@ MIDDLE[2] <= 74185:inst2.Y3
 MIDDLE[3] <= 74185:inst1.Y4
 MSD[0] <= 74185:inst2.Y5
 MSD[1] <= 74185:inst2.Y4
+MSD[2] <= <GND>
+MSD[3] <= <GND>
 
 
-|Pre-Projeto|conversorbinbcd:inst7|74185:inst1
+|Pre-Projeto|conversorbinbcd:inst21|74185:inst1
 Y1 <= 41.DB_MAX_OUTPUT_PORT_TYPE
 A => 56.IN0
 A => 29.IN0
@@ -701,7 +790,7 @@ Y7 <= <VCC>
 Y8 <= <VCC>
 
 
-|Pre-Projeto|conversorbinbcd:inst7|74185:inst
+|Pre-Projeto|conversorbinbcd:inst21|74185:inst
 Y1 <= 41.DB_MAX_OUTPUT_PORT_TYPE
 A => 56.IN0
 A => 29.IN0
@@ -810,7 +899,7 @@ Y7 <= <VCC>
 Y8 <= <VCC>
 
 
-|Pre-Projeto|conversorbinbcd:inst7|74185:inst2
+|Pre-Projeto|conversorbinbcd:inst21|74185:inst2
 Y1 <= 41.DB_MAX_OUTPUT_PORT_TYPE
 A => 56.IN0
 A => 29.IN0
@@ -1010,20 +1099,6 @@ escolha => saida.OUTPUTSELECT
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|decoder7:inst8
-In[0] => Decoder0.IN3
-In[1] => Decoder0.IN2
-In[2] => Decoder0.IN1
-In[3] => Decoder0.IN0
-Out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-Out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-Out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |Pre-Projeto|decoder7:inst9
 In[0] => Decoder0.IN3
 In[1] => Decoder0.IN2
@@ -1036,5 +1111,30 @@ Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|decoder7:inst10
+In[0] => Decoder0.IN3
+In[1] => Decoder0.IN2
+In[2] => Decoder0.IN1
+In[3] => Decoder0.IN0
+Out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Pre-Projeto|displaynegativo:inst16
+S[0] <= <GND>
+S[1] <= <GND>
+S[2] <= <GND>
+S[3] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= <GND>
+S[5] <= <GND>
+S[6] <= <GND>
+MSB => inst.IN1
 
 

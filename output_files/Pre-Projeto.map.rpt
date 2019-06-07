@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Pre-Projeto
-Thu Jun  6 18:45:53 2019
+Thu Jun  6 22:32:19 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun  6 18:45:53 2019           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun  6 22:32:19 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Pre-Projeto                                     ;
 ; Top-level Entity Name              ; Pre-Projeto                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 21                                              ;
-;     Total combinational functions  ; 21                                              ;
+; Total logic elements               ; 75                                              ;
+;     Total combinational functions  ; 75                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 18                                              ;
+; Total pins                         ; 73                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -167,56 +167,75 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; mux2barramento.bdf               ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/mux2barramento.bdf     ;         ;
 ; conversorbinbcd.bdf              ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/conversorbinbcd.bdf    ;         ;
 ; decodificadordisplay.v           ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/decodificadordisplay.v ;         ;
+; displaynegativo.bdf              ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/displaynegativo.bdf    ;         ;
+; displayerro.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/displayerro.bdf        ;         ;
 ; 74185.bdf                        ; yes             ; Megafunction                       ; /home/andre/altera/13.0sp1/quartus/libraries/others/maxplus2/74185.bdf                                         ;         ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 21    ;
-;                                             ;       ;
-; Total combinational functions               ; 21    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 5     ;
-;     -- 3 input functions                    ; 9     ;
-;     -- <=2 input functions                  ; 7     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 14    ;
-;     -- arithmetic mode                      ; 7     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 18    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; CINSW ;
-; Maximum fan-out                             ; 10    ;
-; Total fan-out                               ; 60    ;
-; Average fan-out                             ; 1.54  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                 ;
++---------------------------------------------+-------------------------------+
+; Resource                                    ; Usage                         ;
++---------------------------------------------+-------------------------------+
+; Estimated Total logic elements              ; 75                            ;
+;                                             ;                               ;
+; Total combinational functions               ; 75                            ;
+; Logic element usage by number of LUT inputs ;                               ;
+;     -- 4 input functions                    ; 47                            ;
+;     -- 3 input functions                    ; 17                            ;
+;     -- <=2 input functions                  ; 11                            ;
+;                                             ;                               ;
+; Logic elements by mode                      ;                               ;
+;     -- normal mode                          ; 68                            ;
+;     -- arithmetic mode                      ; 7                             ;
+;                                             ;                               ;
+; Total registers                             ; 0                             ;
+;     -- Dedicated logic registers            ; 0                             ;
+;     -- I/O registers                        ; 0                             ;
+;                                             ;                               ;
+; I/O pins                                    ; 73                            ;
+; Embedded Multiplier 9-bit elements          ; 0                             ;
+; Maximum fan-out node                        ; somsub:inst|somador:inst8|S~0 ;
+; Maximum fan-out                             ; 14                            ;
+; Total fan-out                               ; 290                           ;
+; Average fan-out                             ; 1.96                          ;
++---------------------------------------------+-------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; |Pre-Projeto               ; 21 (5)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |Pre-Projeto                           ; work         ;
-;    |somsub:inst|           ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst               ; work         ;
-;       |mux2:inst10|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst10   ; work         ;
-;       |mux2:inst11|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst11   ; work         ;
-;       |mux2:inst12|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst12   ; work         ;
-;       |mux2:inst13|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst13   ; work         ;
-;       |mux2:inst18|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst18   ; work         ;
-;       |mux2:inst19|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst19   ; work         ;
-;       |somador:inst1|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst1 ; work         ;
-;       |somador:inst3|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst3 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                             ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
+; |Pre-Projeto                ; 75 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 73   ; 0            ; |Pre-Projeto                                    ; work         ;
+;    |conversorbinbcd:inst21| ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21             ; work         ;
+;       |74185:inst1|         ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst1 ; work         ;
+;       |74185:inst2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst2 ; work         ;
+;       |74185:inst|          ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst  ; work         ;
+;    |decoder7:inst8|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst8                     ; work         ;
+;    |decoder7:inst9|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst9                     ; work         ;
+;    |mux2barramento:inst6|   ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6               ; work         ;
+;       |mux2:inst1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst1    ; work         ;
+;       |mux2:inst2|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst2    ; work         ;
+;       |mux2:inst3|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst3    ; work         ;
+;       |mux2:inst4|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst4    ; work         ;
+;       |mux2:inst5|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst5    ; work         ;
+;    |somsub:inst1|           ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1                       ; work         ;
+;       |somador:inst2|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1|somador:inst2         ; work         ;
+;       |somador:inst4|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1|somador:inst4         ; work         ;
+;       |somador:inst6|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1|somador:inst6         ; work         ;
+;    |somsub:inst|            ; 19 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst                        ; work         ;
+;       |mux2:inst10|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst10            ; work         ;
+;       |mux2:inst11|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst11            ; work         ;
+;       |mux2:inst12|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst12            ; work         ;
+;       |mux2:inst13|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst13            ; work         ;
+;       |mux2:inst18|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst18            ; work         ;
+;       |mux2:inst19|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst19            ; work         ;
+;       |somador:inst1|       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst1          ; work         ;
+;       |somador:inst3|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst3          ; work         ;
+;       |somador:inst8|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst8          ; work         ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -250,7 +269,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun  6 18:45:48 2019
+    Info: Processing started: Thu Jun  6 22:32:16 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pre-Projeto -c Pre-Projeto
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file Pre-Projeto.bdf
@@ -267,25 +286,61 @@ Info (12021): Found 1 design units, including 1 entities, in source file convers
     Info (12023): Found entity 1: conversorbinbcd
 Info (12021): Found 1 design units, including 1 entities, in source file decodificadordisplay.v
     Info (12023): Found entity 1: decoder7
+Info (12021): Found 1 design units, including 1 entities, in source file displaynegativo.bdf
+    Info (12023): Found entity 1: displaynegativo
+Info (12021): Found 1 design units, including 1 entities, in source file displayerro.bdf
+    Info (12023): Found entity 1: displayerro
+Info (12021): Found 1 design units, including 1 entities, in source file zeradisplay.bdf
+    Info (12023): Found entity 1: zeradisplay
 Info (12127): Elaborating entity "Pre-Projeto" for the top level hierarchy
+Info (12128): Elaborating entity "displayerro" for hierarchy "displayerro:inst17"
+Warning (275008): Primitive "NOT" of instance "inst107" not used
+Warning (275008): Primitive "NOT" of instance "inst109" not used
 Info (12128): Elaborating entity "somsub" for hierarchy "somsub:inst1"
 Info (12128): Elaborating entity "somador" for hierarchy "somsub:inst1|somador:inst7"
 Info (12128): Elaborating entity "mux2" for hierarchy "somsub:inst1|mux2:inst19"
-Info (12128): Elaborating entity "decoder7" for hierarchy "decoder7:inst10"
-Info (12128): Elaborating entity "conversorbinbcd" for hierarchy "conversorbinbcd:inst7"
-Info (12128): Elaborating entity "74185" for hierarchy "conversorbinbcd:inst7|74185:inst1"
-Info (12130): Elaborated megafunction instantiation "conversorbinbcd:inst7|74185:inst1"
+Info (12128): Elaborating entity "decoder7" for hierarchy "decoder7:inst8"
+Info (12128): Elaborating entity "conversorbinbcd" for hierarchy "conversorbinbcd:inst21"
+Info (12128): Elaborating entity "74185" for hierarchy "conversorbinbcd:inst21|74185:inst1"
+Info (12130): Elaborated megafunction instantiation "conversorbinbcd:inst21|74185:inst1"
 Info (12128): Elaborating entity "mux2barramento" for hierarchy "mux2barramento:inst6"
+Info (12128): Elaborating entity "displaynegativo" for hierarchy "displaynegativo:inst16"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "AHEX0[2]" is stuck at GND
+    Warning (13410): Pin "AHEX0[1]" is stuck at GND
+    Warning (13410): Pin "AHEX0[0]" is stuck at GND
+    Warning (13410): Pin "AHEX1[6]" is stuck at GND
+    Warning (13410): Pin "AHEX1[5]" is stuck at GND
+    Warning (13410): Pin "AHEX1[2]" is stuck at GND
+    Warning (13410): Pin "AHEX1[1]" is stuck at GND
+    Warning (13410): Pin "AHEX1[0]" is stuck at GND
+    Warning (13410): Pin "AHEX2[6]" is stuck at GND
+    Warning (13410): Pin "AHEX2[5]" is stuck at GND
+    Warning (13410): Pin "AHEX2[2]" is stuck at GND
+    Warning (13410): Pin "AHEX2[1]" is stuck at GND
+    Warning (13410): Pin "AHEX2[0]" is stuck at GND
+    Warning (13410): Pin "AHEX3[5]" is stuck at GND
+    Warning (13410): Pin "AHEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 148 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 21 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Thu Jun  6 18:45:53 2019
-    Info: Elapsed time: 00:00:05
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 75 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 349 megabytes
+    Info: Processing ended: Thu Jun  6 22:32:19 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 
