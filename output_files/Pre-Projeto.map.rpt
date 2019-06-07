@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Pre-Projeto
-Fri Jun  7 11:54:57 2019
+Fri Jun  7 14:11:51 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun  7 11:54:57 2019           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun  7 14:11:51 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Pre-Projeto                                     ;
-; Top-level Entity Name              ; mux2barramento3_0                               ;
+; Top-level Entity Name              ; Pre-Projeto                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 7                                               ;
-;     Total combinational functions  ; 7                                               ;
+; Total logic elements               ; 162                                             ;
+;     Total combinational functions  ; 162                                             ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 22                                              ;
+; Total pins                         ; 74                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; mux2barramento3_0  ; Pre-Projeto        ;
+; Top-level entity name                                                      ; Pre-Projeto        ; Pre-Projeto        ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
 ; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
@@ -155,14 +155,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
-; mux2.v                           ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/mux2.v                ;         ;
-; mux2barramento3_0.bdf            ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/mux2barramento3_0.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; Pre-Projeto.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/Pre-Projeto.bdf        ;         ;
+; mux2.v                           ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/mux2.v                 ;         ;
+; somador.v                        ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/somador.v              ;         ;
+; somsub.bdf                       ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/somsub.bdf             ;         ;
+; mux2barramento.bdf               ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/mux2barramento.bdf     ;         ;
+; conversorbinbcd.bdf              ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/conversorbinbcd.bdf    ;         ;
+; decodificadordisplay.v           ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/decodificadordisplay.v ;         ;
+; displaynegativo.bdf              ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/displaynegativo.bdf    ;         ;
+; displayerro.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/displayerro.bdf        ;         ;
+; zeradisplay.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/zeradisplay.bdf        ;         ;
+; mux2barramento3_0.bdf            ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/mux2barramento3_0.bdf  ;         ;
+; mux2barramento6_0.bdf            ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/mux2barramento6_0.bdf  ;         ;
+; 74185.bdf                        ; yes             ; Megafunction                       ; /home/andre/altera/13.0sp1/quartus/libraries/others/maxplus2/74185.bdf                                         ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -170,45 +181,116 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Estimated Total logic elements              ; 7       ;
+; Estimated Total logic elements              ; 162     ;
 ;                                             ;         ;
-; Total combinational functions               ; 7       ;
+; Total combinational functions               ; 162     ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 0       ;
-;     -- 3 input functions                    ; 7       ;
-;     -- <=2 input functions                  ; 0       ;
+;     -- 4 input functions                    ; 93      ;
+;     -- 3 input functions                    ; 48      ;
+;     -- <=2 input functions                  ; 21      ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 7       ;
-;     -- arithmetic mode                      ; 0       ;
+;     -- normal mode                          ; 155     ;
+;     -- arithmetic mode                      ; 7       ;
 ;                                             ;         ;
 ; Total registers                             ; 0       ;
 ;     -- Dedicated logic registers            ; 0       ;
 ;     -- I/O registers                        ; 0       ;
 ;                                             ;         ;
-; I/O pins                                    ; 22      ;
+; I/O pins                                    ; 74      ;
 ; Embedded Multiplier 9-bit elements          ; 0       ;
-; Maximum fan-out node                        ; ESCOLHA ;
-; Maximum fan-out                             ; 7       ;
-; Total fan-out                               ; 28      ;
-; Average fan-out                             ; 0.97    ;
+; Maximum fan-out node                        ; inst2~0 ;
+; Maximum fan-out                             ; 41      ;
+; Total fan-out                               ; 600     ;
+; Average fan-out                             ; 2.54    ;
 +---------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; |mux2barramento3_0         ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |mux2barramento3_0            ; work         ;
-;    |mux2:inst1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2barramento3_0|mux2:inst1 ; work         ;
-;    |mux2:inst2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2barramento3_0|mux2:inst2 ; work         ;
-;    |mux2:inst3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2barramento3_0|mux2:inst3 ; work         ;
-;    |mux2:inst4|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2barramento3_0|mux2:inst4 ; work         ;
-;    |mux2:inst5|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2barramento3_0|mux2:inst5 ; work         ;
-;    |mux2:inst6|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2barramento3_0|mux2:inst6 ; work         ;
-;    |mux2:inst|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mux2barramento3_0|mux2:inst  ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
+; |Pre-Projeto                    ; 162 (1)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |Pre-Projeto                                                             ; work         ;
+;    |conversorbinbcd:inst21|     ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21                                      ; work         ;
+;       |74185:inst1|             ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst1                          ; work         ;
+;       |74185:inst2|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst2                          ; work         ;
+;       |74185:inst|              ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst                           ; work         ;
+;    |conversorbinbcd:inst7|      ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst7                                       ; work         ;
+;       |74185:inst1|             ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst7|74185:inst1                           ; work         ;
+;       |74185:inst2|             ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst7|74185:inst2                           ; work         ;
+;       |74185:inst|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst7|74185:inst                            ; work         ;
+;    |decoder7:inst13|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst13                                             ; work         ;
+;    |decoder7:inst14|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst14                                             ; work         ;
+;    |decoder7:inst8|             ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst8                                              ; work         ;
+;    |decoder7:inst9|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst9                                              ; work         ;
+;    |mux2barramento3_0:inst23|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento3_0:inst23                                    ; work         ;
+;       |mux2:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento3_0:inst23|mux2:inst3                         ; work         ;
+;    |mux2barramento6_0:inst18|   ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18                                    ; work         ;
+;       |mux2barramento3_0:inst1| ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst1            ; work         ;
+;          |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst1|mux2:inst1 ; work         ;
+;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst1|mux2:inst2 ; work         ;
+;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst1|mux2:inst3 ; work         ;
+;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst1|mux2:inst4 ; work         ;
+;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst1|mux2:inst5 ; work         ;
+;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst1|mux2:inst6 ; work         ;
+;          |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst1|mux2:inst  ; work         ;
+;       |mux2barramento3_0:inst2| ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst2            ; work         ;
+;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst2|mux2:inst2 ; work         ;
+;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst2|mux2:inst3 ; work         ;
+;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst2|mux2:inst4 ; work         ;
+;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst2|mux2:inst5 ; work         ;
+;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst2|mux2:inst6 ; work         ;
+;       |mux2barramento3_0:inst|  ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst             ; work         ;
+;          |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst|mux2:inst1  ; work         ;
+;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst|mux2:inst2  ; work         ;
+;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst|mux2:inst3  ; work         ;
+;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst|mux2:inst4  ; work         ;
+;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst|mux2:inst5  ; work         ;
+;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst|mux2:inst6  ; work         ;
+;          |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst18|mux2barramento3_0:inst|mux2:inst   ; work         ;
+;    |mux2barramento6_0:inst20|   ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20                                    ; work         ;
+;       |mux2barramento3_0:inst1| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst1            ; work         ;
+;          |mux2:inst1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst1|mux2:inst1 ; work         ;
+;          |mux2:inst2|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst1|mux2:inst2 ; work         ;
+;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst1|mux2:inst3 ; work         ;
+;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst1|mux2:inst4 ; work         ;
+;          |mux2:inst5|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst1|mux2:inst5 ; work         ;
+;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst1|mux2:inst6 ; work         ;
+;          |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst1|mux2:inst  ; work         ;
+;       |mux2barramento3_0:inst2| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst2            ; work         ;
+;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst2|mux2:inst5 ; work         ;
+;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst2|mux2:inst6 ; work         ;
+;       |mux2barramento3_0:inst|  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst             ; work         ;
+;          |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst|mux2:inst1  ; work         ;
+;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst|mux2:inst2  ; work         ;
+;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst|mux2:inst3  ; work         ;
+;          |mux2:inst4|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst|mux2:inst4  ; work         ;
+;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst|mux2:inst5  ; work         ;
+;          |mux2:inst6|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst|mux2:inst6  ; work         ;
+;          |mux2:inst|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst20|mux2barramento3_0:inst|mux2:inst   ; work         ;
+;    |mux2barramento:inst6|       ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6                                        ; work         ;
+;       |mux2:inst1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst1                             ; work         ;
+;       |mux2:inst2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst2                             ; work         ;
+;       |mux2:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst3                             ; work         ;
+;       |mux2:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst4                             ; work         ;
+;       |mux2:inst5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst5                             ; work         ;
+;       |mux2:inst6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst6                             ; work         ;
+;    |somsub:inst1|               ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1                                                ; work         ;
+;       |somador:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1|somador:inst2                                  ; work         ;
+;       |somador:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1|somador:inst4                                  ; work         ;
+;       |somador:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1|somador:inst6                                  ; work         ;
+;    |somsub:inst|                ; 19 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst                                                 ; work         ;
+;       |mux2:inst10|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst10                                     ; work         ;
+;       |mux2:inst11|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst11                                     ; work         ;
+;       |mux2:inst12|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst12                                     ; work         ;
+;       |mux2:inst13|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst13                                     ; work         ;
+;       |mux2:inst18|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst18                                     ; work         ;
+;       |mux2:inst19|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst19                                     ; work         ;
+;       |somador:inst1|           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst1                                   ; work         ;
+;       |somador:inst3|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst3                                   ; work         ;
+;       |somador:inst8|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst8                                   ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -232,7 +314,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -242,7 +324,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun  7 11:54:54 2019
+    Info: Processing started: Fri Jun  7 14:11:45 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pre-Projeto -c Pre-Projeto
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file Pre-Projeto.bdf
@@ -267,18 +349,47 @@ Info (12021): Found 1 design units, including 1 entities, in source file zeradis
     Info (12023): Found entity 1: zeradisplay
 Info (12021): Found 1 design units, including 1 entities, in source file mux2barramento3_0.bdf
     Info (12023): Found entity 1: mux2barramento3_0
-Info (12127): Elaborating entity "mux2barramento3_0" for the top level hierarchy
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2:inst"
+Info (12021): Found 1 design units, including 1 entities, in source file mux2barramento6_0.bdf
+    Info (12023): Found entity 1: mux2barramento6_0
+Info (12127): Elaborating entity "Pre-Projeto" for the top level hierarchy
+Info (12128): Elaborating entity "mux2barramento6_0" for hierarchy "mux2barramento6_0:inst20"
+Info (12128): Elaborating entity "mux2barramento3_0" for hierarchy "mux2barramento6_0:inst20|mux2barramento3_0:inst2"
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2barramento6_0:inst20|mux2barramento3_0:inst2|mux2:inst"
+Info (12128): Elaborating entity "somsub" for hierarchy "somsub:inst1"
+Info (12128): Elaborating entity "somador" for hierarchy "somsub:inst1|somador:inst7"
+Info (12128): Elaborating entity "decoder7" for hierarchy "decoder7:inst10"
+Info (12128): Elaborating entity "conversorbinbcd" for hierarchy "conversorbinbcd:inst21"
+Info (12128): Elaborating entity "74185" for hierarchy "conversorbinbcd:inst21|74185:inst1"
+Info (12130): Elaborated megafunction instantiation "conversorbinbcd:inst21|74185:inst1"
+Info (12128): Elaborating entity "mux2barramento" for hierarchy "mux2barramento:inst6"
+Info (12128): Elaborating entity "displayerro" for hierarchy "displayerro:inst22"
+Warning (275008): Primitive "NOT" of instance "inst107" not used
+Warning (275008): Primitive "NOT" of instance "inst109" not used
+Info (12128): Elaborating entity "displaynegativo" for hierarchy "displaynegativo:inst16"
+Info (12128): Elaborating entity "zeradisplay" for hierarchy "zeradisplay:inst11"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX7[6]" is stuck at GND
+    Warning (13410): Pin "HEX7[5]" is stuck at GND
+    Warning (13410): Pin "HEX7[4]" is stuck at GND
+    Warning (13410): Pin "HEX7[3]" is stuck at GND
+    Warning (13410): Pin "HEX7[2]" is stuck at GND
+    Warning (13410): Pin "HEX7[1]" is stuck at GND
+    Warning (13410): Pin "HEX7[0]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 29 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
+Info (21057): Implemented 236 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 162 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Fri Jun  7 11:54:57 2019
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Fri Jun  7 14:11:51 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 

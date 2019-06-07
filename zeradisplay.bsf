@@ -20,24 +20,17 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 152 112)
+	(rect 16 16 112 112)
 	(text "zeradisplay" (rect 5 0 72 12)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 82 25 92)(font "Arial" ))
 	(port
-		(pt 0 32)
-		(input)
-		(text "ZERAR" (rect 0 0 46 12)(font "Arial" (font_size 8)))
-		(text "ZERAR" (rect 21 27 67 39)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 136 32)
+		(pt 96 32)
 		(output)
 		(text "S[6..0]" (rect 0 0 38 12)(font "Arial" (font_size 8)))
-		(text "S[6..0]" (rect 77 27 115 39)(font "Arial" (font_size 8)))
-		(line (pt 136 32)(pt 120 32)(line_width 3))
+		(text "S[6..0]" (rect 37 27 75 39)(font "Arial" (font_size 8)))
+		(line (pt 96 32)(pt 80 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 120 80))
+		(rectangle (rect 16 16 80 80))
 	)
 )
