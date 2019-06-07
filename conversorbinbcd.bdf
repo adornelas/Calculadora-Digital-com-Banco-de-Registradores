@@ -624,24 +624,9 @@ applicable agreement for further details.
 	(pt 544 176)
 )
 (connector
-	(text "MSD[1]" (rect 740 152 775 162)(font "Arial" ))
-	(pt 720 160)
-	(pt 784 160)
-)
-(connector
-	(text "MSD[0]" (rect 738 168 773 178)(font "Arial" ))
-	(pt 720 176)
-	(pt 784 176)
-)
-(connector
 	(pt 784 128)
 	(pt 784 144)
 	(bus)
-)
-(connector
-	(text "MIDDLE[0]" (rect 728 104 779 114)(font "Arial" ))
-	(pt 720 112)
-	(pt 784 112)
 )
 (connector
 	(pt 552 176)
@@ -907,21 +892,6 @@ applicable agreement for further details.
 	(pt 400 128)
 )
 (connector
-	(text "MIDDLE[3]" (rect 724 88 775 98)(font "Arial" ))
-	(pt 728 96)
-	(pt 784 96)
-)
-(connector
-	(text "MIDDLE[1]" (rect 729 120 780 130)(font "Arial" ))
-	(pt 720 128)
-	(pt 784 128)
-)
-(connector
-	(text "MIDDLE[2]" (rect 736 136 787 146)(font "Arial" ))
-	(pt 720 144)
-	(pt 784 144)
-)
-(connector
 	(text "B[7]" (rect 24 160 34 178)(font "Arial" )(vertical))
 	(pt 32 -80)
 	(pt 32 192)
@@ -983,6 +953,36 @@ applicable agreement for further details.
 	(pt 784 224)
 	(pt 864 224)
 	(bus)
+)
+(connector
+	(text "MIDDLE[0]" (rect 724 88 775 98)(font "Arial" ))
+	(pt 728 96)
+	(pt 784 96)
+)
+(connector
+	(text "MIDDLE[1]" (rect 728 104 779 114)(font "Arial" ))
+	(pt 720 112)
+	(pt 784 112)
+)
+(connector
+	(text "MIDDLE[2]" (rect 729 120 780 130)(font "Arial" ))
+	(pt 720 128)
+	(pt 784 128)
+)
+(connector
+	(text "MIDDLE[3]" (rect 736 136 787 146)(font "Arial" ))
+	(pt 720 144)
+	(pt 784 144)
+)
+(connector
+	(text "MSD[0]" (rect 740 152 775 162)(font "Arial" ))
+	(pt 720 160)
+	(pt 784 160)
+)
+(connector
+	(text "MSD[1]" (rect 738 168 773 178)(font "Arial" ))
+	(pt 720 176)
+	(pt 784 176)
 )
 (junction (pt 784 176))
 (junction (pt 784 128))

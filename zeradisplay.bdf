@@ -36,19 +36,17 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 360 248 392 280)
-	(text "GND" (rect 8 16 30 25)(font "Arial" (font_size 6)))
-	(text "inst3" (rect 3 21 26 31)(font "Arial" )(invisible))
+	(rect 336 232 368 248)
+	(text "VCC" (rect 7 0 28 9)(font "Arial" (font_size 6)))
+	(text "inst" (rect 3 5 20 15)(font "Arial" )(invisible))
 	(port
-		(pt 16 0)
+		(pt 16 16)
 		(output)
-		(text "1" (rect 18 0 27 11)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 27 11)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
+		(text "1" (rect 19 7 28 18)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 28 18)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
 	)
 	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
 		(line (pt 8 8)(pt 24 8))
 	)
 )
@@ -87,10 +85,6 @@ applicable agreement for further details.
 	(text "S[1]" (rect 386 144 404 154)(font "Arial" ))
 	(pt 376 152)
 	(pt 416 152)
-)
-(connector
-	(pt 376 216)
-	(pt 376 248)
 )
 (connector
 	(pt 416 216)
@@ -155,6 +149,18 @@ applicable agreement for further details.
 	(text "S[3]" (rect 386 112 404 122)(font "Arial" ))
 	(pt 376 120)
 	(pt 416 120)
+)
+(connector
+	(pt 376 256)
+	(pt 352 256)
+)
+(connector
+	(pt 376 216)
+	(pt 376 256)
+)
+(connector
+	(pt 352 256)
+	(pt 352 248)
 )
 (junction (pt 416 200))
 (junction (pt 416 216))
