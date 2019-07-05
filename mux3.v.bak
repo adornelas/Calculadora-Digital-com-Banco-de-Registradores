@@ -1,0 +1,8 @@
+module mux3(
+	input [3:0] entrada,
+	input escolha,
+	output saida
+);
+
+assign saida = entrada[escolha];
+endmodule
