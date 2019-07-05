@@ -1,6 +1,6 @@
 Fitter report for Pre-Projeto
-Fri Jun 07 20:05:29 2019
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Jul  5 08:53:12 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -60,15 +60,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jun 07 20:05:29 2019           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Fitter Status                      ; Successful - Fri Jul  5 08:53:12 2019           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Pre-Projeto                                     ;
 ; Top-level Entity Name              ; Pre-Projeto                                     ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 226 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 226 / 33,216 ( < 1 % )                          ;
+; Total logic elements               ; 228 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 228 / 33,216 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                              ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 74 / 475 ( 16 % )                               ;
@@ -505,8 +505,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 303 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 303 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 305 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 305 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -529,7 +529,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 301     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 303     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 2       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -537,7 +537,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in E:/Calculadora-Digital-com-Banco-de-Registradores/output_files/Pre-Projeto.pin.
+The pin-out file can be found in /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/output_files/Pre-Projeto.pin.
 
 
 +----------------------------------------------------------------------+
@@ -545,19 +545,19 @@ The pin-out file can be found in E:/Calculadora-Digital-com-Banco-de-Registrador
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 226 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 226                    ;
+; Total logic elements                        ; 228 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 228                    ;
 ;     -- Register only                        ; 0                      ;
 ;     -- Combinational with a register        ; 0                      ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 144                    ;
-;     -- 3 input functions                    ; 54                     ;
-;     -- <=2 input functions                  ; 28                     ;
+;     -- 4 input functions                    ; 143                    ;
+;     -- 3 input functions                    ; 58                     ;
+;     -- <=2 input functions                  ; 27                     ;
 ;     -- Register only                        ; 0                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 219                    ;
+;     -- normal mode                          ; 221                    ;
 ;     -- arithmetic mode                      ; 7                      ;
 ;                                             ;                        ;
 ; Total registers*                            ; 0 / 34,593 ( 0 % )     ;
@@ -583,8 +583,8 @@ The pin-out file can be found in E:/Calculadora-Digital-com-Banco-de-Registrador
 ; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%           ;
 ; Maximum fan-out                             ; 46                     ;
 ; Highest non-global fan-out                  ; 46                     ;
-; Total fan-out                               ; 844                    ;
-; Average fan-out                             ; 2.79                   ;
+; Total fan-out                               ; 850                    ;
+; Average fan-out                             ; 2.80                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -597,19 +597,19 @@ The pin-out file can be found in E:/Calculadora-Digital-com-Banco-de-Registrador
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 226 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 226                   ; 0                              ;
+; Total logic elements                        ; 228 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 228                   ; 0                              ;
 ;     -- Register only                        ; 0                     ; 0                              ;
 ;     -- Combinational with a register        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 144                   ; 0                              ;
-;     -- 3 input functions                    ; 54                    ; 0                              ;
-;     -- <=2 input functions                  ; 28                    ; 0                              ;
+;     -- 4 input functions                    ; 143                   ; 0                              ;
+;     -- 3 input functions                    ; 58                    ; 0                              ;
+;     -- <=2 input functions                  ; 27                    ; 0                              ;
 ;     -- Register only                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 219                   ; 0                              ;
+;     -- normal mode                          ; 221                   ; 0                              ;
 ;     -- arithmetic mode                      ; 7                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 0                     ; 0                              ;
@@ -630,7 +630,7 @@ The pin-out file can be found in E:/Calculadora-Digital-com-Banco-de-Registrador
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 844                   ; 0                              ;
+;     -- Total Connections                    ; 850                   ; 0                              ;
 ;     -- Registered Connections               ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
@@ -664,12 +664,12 @@ The pin-out file can be found in E:/Calculadora-Digital-com-Banco-de-Registrador
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; SW[0]  ; N25   ; 5        ; 65           ; 19           ; 0           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[10] ; N1    ; 2        ; 0            ; 18           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[11] ; P1    ; 1        ; 0            ; 18           ; 3           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[12] ; P2    ; 1        ; 0            ; 18           ; 2           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[13] ; T7    ; 1        ; 0            ; 11           ; 0           ; 12                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[14] ; U3    ; 1        ; 0            ; 12           ; 0           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[15] ; U4    ; 1        ; 0            ; 12           ; 1           ; 12                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[10] ; N1    ; 2        ; 0            ; 18           ; 1           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[11] ; P1    ; 1        ; 0            ; 18           ; 3           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[12] ; P2    ; 1        ; 0            ; 18           ; 2           ; 10                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[13] ; T7    ; 1        ; 0            ; 11           ; 0           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[14] ; U3    ; 1        ; 0            ; 12           ; 0           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[15] ; U4    ; 1        ; 0            ; 12           ; 1           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[16] ; V1    ; 1        ; 0            ; 12           ; 2           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[17] ; V2    ; 1        ; 0            ; 12           ; 3           ; 46                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[1]  ; N26   ; 5        ; 65           ; 19           ; 1           ; 9                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
@@ -1487,14 +1487,14 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                        ; Library Name ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------+--------------+
-; |Pre-Projeto                    ; 226 (2)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 74   ; 0            ; 226 (2)      ; 0 (0)             ; 0 (0)            ; |Pre-Projeto                                                               ; work         ;
+; |Pre-Projeto                    ; 228 (2)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 74   ; 0            ; 228 (2)      ; 0 (0)             ; 0 (0)            ; |Pre-Projeto                                                               ; work         ;
 ;    |conversorbinbcd:inst21|     ; 44 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst21                                        ; work         ;
 ;       |74185:inst1|             ; 19 (19)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst1                            ; work         ;
 ;       |74185:inst2|             ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst2                            ; work         ;
 ;       |74185:inst|              ; 23 (23)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst                             ; work         ;
-;    |conversorbinbcd:inst25|     ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst25                                        ; work         ;
+;    |conversorbinbcd:inst25|     ; 32 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst25                                        ; work         ;
 ;       |74185:inst1|             ; 13 (13)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst25|74185:inst1                            ; work         ;
-;       |74185:inst2|             ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst25|74185:inst2                            ; work         ;
+;       |74185:inst2|             ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst25|74185:inst2                            ; work         ;
 ;       |74185:inst|              ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst25|74185:inst                             ; work         ;
 ;    |conversorbinbcd:inst7|      ; 32 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst7                                         ; work         ;
 ;       |74185:inst1|             ; 13 (13)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|conversorbinbcd:inst7|74185:inst1                             ; work         ;
@@ -1503,14 +1503,14 @@ Note: User assignments will override these defaults. The user specified values a
 ;    |decoder7:inst13|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|decoder7:inst13                                               ; work         ;
 ;    |decoder7:inst14|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|decoder7:inst14                                               ; work         ;
 ;    |decoder7:inst26|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|decoder7:inst26                                               ; work         ;
-;    |decoder7:inst27|            ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|decoder7:inst27                                               ; work         ;
+;    |decoder7:inst27|            ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|decoder7:inst27                                               ; work         ;
 ;    |decoder7:inst8|             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|decoder7:inst8                                                ; work         ;
 ;    |decoder7:inst9|             ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|decoder7:inst9                                                ; work         ;
 ;    |mux2barramento3_0:inst30|   ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento3_0:inst30                                      ; work         ;
-;       |mux2:inst5|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento3_0:inst30|mux2:inst5                           ; work         ;
+;       |mux2:inst3|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento3_0:inst30|mux2:inst3                           ; work         ;
 ;       |mux2:inst6|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento3_0:inst30|mux2:inst6                           ; work         ;
 ;    |mux2barramento3_0:instoo|   ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento3_0:instoo                                      ; work         ;
-;       |mux2:inst5|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento3_0:instoo|mux2:inst5                           ; work         ;
+;       |mux2:inst3|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento3_0:instoo|mux2:inst3                           ; work         ;
 ;       |mux2:inst6|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento3_0:instoo|mux2:inst6                           ; work         ;
 ;    |mux2barramento6_0:inst1gg8| ; 20 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst1gg8                                    ; work         ;
 ;       |mux2barramento3_0:inst1| ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1            ; work         ;
@@ -1535,15 +1535,15 @@ Note: User assignments will override these defaults. The user specified values a
 ;          |mux2:inst5|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst5  ; work         ;
 ;          |mux2:inst6|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst6  ; work         ;
 ;          |mux2:inst|            ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst   ; work         ;
-;    |mux2barramento6_0:inst24|   ; 27 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24                                      ; work         ;
+;    |mux2barramento6_0:inst24|   ; 31 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24                                      ; work         ;
 ;       |mux2barramento3_0:inst1| ; 13 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1              ; work         ;
 ;          |mux2:inst1|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst1   ; work         ;
-;          |mux2:inst2|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2   ; work         ;
+;          |mux2:inst2|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2   ; work         ;
 ;          |mux2:inst3|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst3   ; work         ;
 ;          |mux2:inst4|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst4   ; work         ;
 ;          |mux2:inst5|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst5   ; work         ;
-;          |mux2:inst6|           ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6   ; work         ;
-;          |mux2:inst|            ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst    ; work         ;
+;          |mux2:inst6|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6   ; work         ;
+;          |mux2:inst|            ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst    ; work         ;
 ;       |mux2barramento3_0:inst2| ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2              ; work         ;
 ;          |mux2:inst1|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst1   ; work         ;
 ;          |mux2:inst2|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst2   ; work         ;
@@ -1552,12 +1552,13 @@ Note: User assignments will override these defaults. The user specified values a
 ;          |mux2:inst5|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst5   ; work         ;
 ;          |mux2:inst6|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst6   ; work         ;
 ;          |mux2:inst|            ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst    ; work         ;
-;       |mux2barramento3_0:inst|  ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst               ; work         ;
+;       |mux2barramento3_0:inst|  ; 11 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst               ; work         ;
 ;          |mux2:inst2|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst2    ; work         ;
-;          |mux2:inst3|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst3    ; work         ;
-;          |mux2:inst4|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4    ; work         ;
-;          |mux2:inst5|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5    ; work         ;
-;          |mux2:inst6|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6    ; work         ;
+;          |mux2:inst3|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst3    ; work         ;
+;          |mux2:inst4|           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4    ; work         ;
+;          |mux2:inst5|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5    ; work         ;
+;          |mux2:inst6|           ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6    ; work         ;
+;          |mux2:inst|            ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst     ; work         ;
 ;    |mux2barramento:inst6|       ; 5 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento:inst6                                          ; work         ;
 ;       |mux2:inst1|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst1                               ; work         ;
 ;       |mux2:inst2|              ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst2                               ; work         ;
@@ -1643,22 +1644,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HEX7[1] ; Output   ; --            ; --            ; --                    ; --  ;
 ; HEX7[0] ; Output   ; --            ; --            ; --                    ; --  ;
 ; SW[17]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; SW[16]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; SW[14]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; SW[6]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[13]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; SW[5]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[12]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[4]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[11]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[3]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[10]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[2]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[9]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; SW[1]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; SW[0]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; SW[8]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[13]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; SW[11]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[12]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[14]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; SW[15]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; SW[10]  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[9]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[0]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[16]  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; SW[1]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[2]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[6]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[5]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[4]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[3]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; SW[7]   ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 +---------+----------+---------------+---------------+-----------------------+-----+
 
@@ -1669,30 +1670,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                           ; Pad To Core Index ; Setting ;
 +-------------------------------------------------------------------------------+-------------------+---------+
 ; SW[17]                                                                        ;                   ;         ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6|saida~0    ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst6|saida~0    ; 1                 ; 6       ;
 ;      - inst59                                                                 ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst6|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst5|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst4|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst3|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst2|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst1|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst|saida~0     ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6|saida~3    ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst5|saida~0    ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst4|saida~0    ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst4|saida~1    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst3|saida~0    ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2|saida~1    ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2|saida~2    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst1|saida~0    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst1|saida~1    ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst|saida~0     ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6|saida~0     ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~2     ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4|saida~1     ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst|saida~2     ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~12    ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4|saida~0     ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst3|saida~0     ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst3|saida~1     ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst2|saida~0     ; 1                 ; 6       ;
-;      - mux2barramento3_0:inst30|mux2:inst5|saida~0                            ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst|saida~1      ; 1                 ; 6       ;
+;      - mux2barramento3_0:inst30|mux2:inst3|saida~0                            ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst6|saida~0   ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst5|saida~0   ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst4|saida~0   ; 1                 ; 6       ;
@@ -1711,71 +1712,74 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst4|saida~0  ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst3|saida~0  ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst2|saida~0  ; 1                 ; 6       ;
-;      - mux2barramento3_0:instoo|mux2:inst5|saida~0                            ; 1                 ; 6       ;
-;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~3     ; 1                 ; 6       ;
+;      - mux2barramento3_0:instoo|mux2:inst3|saida~0                            ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6|saida~12    ; 1                 ; 6       ;
 ;      - mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst6|saida~12 ; 1                 ; 6       ;
 ;      - HEX6[1]                                                                ; 1                 ; 6       ;
-; SW[16]                                                                        ;                   ;         ;
-;      - somsub:inst|mux2:inst19|saida~0                                        ; 1                 ; 6       ;
-;      - somsub:inst|mux2:inst18|saida~0                                        ; 1                 ; 6       ;
-;      - somsub:inst|mux2:inst13|saida~0                                        ; 1                 ; 6       ;
-;      - somsub:inst|mux2:inst12|saida~0                                        ; 1                 ; 6       ;
-;      - somsub:inst|mux2:inst11|saida~0                                        ; 1                 ; 6       ;
-;      - somsub:inst|mux2:inst10|saida~0                                        ; 1                 ; 6       ;
-;      - somsub:inst|somador:inst3|Cout~0                                       ; 1                 ; 6       ;
-;      - somsub:inst|somador:inst3|S~0                                          ; 1                 ; 6       ;
-;      - somsub:inst|somador:inst8|Cout~0                                       ; 1                 ; 6       ;
-;      - inst3~0                                                                ; 1                 ; 6       ;
-;      - somsub:inst|somador:inst8|S~0                                          ; 1                 ; 6       ;
-; SW[14]                                                                        ;                   ;         ;
-;      - somsub:inst|mux2:inst19|saida~0                                        ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|43~0                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|43~1                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|45~2                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|41~0                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|41~1                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|48                                   ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|81~2                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|82~0                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst2|82~9                                ; 0                 ; 6       ;
-; SW[6]                                                                         ;                   ;         ;
-; SW[13]                                                                        ;                   ;         ;
-;      - somsub:inst|mux2:inst18|saida~0                                        ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|43~0                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|43~1                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|45~0                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|45~1                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|41~0                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|41~1                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|48                                   ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|81~0                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|81~1                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|82~0                                 ; 0                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst2|82~9                                ; 0                 ; 6       ;
-; SW[5]                                                                         ;                   ;         ;
-; SW[12]                                                                        ;                   ;         ;
-; SW[4]                                                                         ;                   ;         ;
-; SW[11]                                                                        ;                   ;         ;
-; SW[3]                                                                         ;                   ;         ;
-; SW[10]                                                                        ;                   ;         ;
-; SW[2]                                                                         ;                   ;         ;
-; SW[9]                                                                         ;                   ;         ;
-; SW[1]                                                                         ;                   ;         ;
-; SW[0]                                                                         ;                   ;         ;
 ; SW[8]                                                                         ;                   ;         ;
+; SW[13]                                                                        ;                   ;         ;
+;      - conversorbinbcd:inst25|74185:inst|43~0                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|43~1                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|45~0                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|45~1                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|41~0                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|41~1                                 ; 1                 ; 6       ;
+;      - somsub:inst|mux2:inst18|saida~0                                        ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|81~0                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|81~1                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|48~0                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|82~0                                 ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~13    ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6|saida~3     ; 1                 ; 6       ;
+; SW[11]                                                                        ;                   ;         ;
+; SW[12]                                                                        ;                   ;         ;
+; SW[14]                                                                        ;                   ;         ;
+;      - conversorbinbcd:inst25|74185:inst|43~0                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|43~1                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|45~2                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|41~0                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|41~1                                 ; 1                 ; 6       ;
+;      - somsub:inst|mux2:inst19|saida~0                                        ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|48~0                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|81~2                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|82~0                                 ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~13    ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6|saida~12    ; 1                 ; 6       ;
 ; SW[15]                                                                        ;                   ;         ;
-;      - somsub:inst|somador:inst8|Cout~0                                       ; 1                 ; 6       ;
 ;      - conversorbinbcd:inst25|74185:inst|43~2                                 ; 1                 ; 6       ;
 ;      - conversorbinbcd:inst25|74185:inst|45~0                                 ; 1                 ; 6       ;
 ;      - conversorbinbcd:inst25|74185:inst|45~1                                 ; 1                 ; 6       ;
 ;      - conversorbinbcd:inst25|74185:inst|41~2                                 ; 1                 ; 6       ;
 ;      - inst3~0                                                                ; 1                 ; 6       ;
 ;      - somsub:inst|somador:inst8|S~0                                          ; 1                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst|48                                   ; 1                 ; 6       ;
+;      - somsub:inst|somador:inst8|Cout~0                                       ; 1                 ; 6       ;
 ;      - conversorbinbcd:inst25|74185:inst|81~0                                 ; 1                 ; 6       ;
 ;      - conversorbinbcd:inst25|74185:inst|81~1                                 ; 1                 ; 6       ;
+;      - conversorbinbcd:inst25|74185:inst|48~0                                 ; 1                 ; 6       ;
 ;      - conversorbinbcd:inst25|74185:inst|82~0                                 ; 1                 ; 6       ;
-;      - conversorbinbcd:inst25|74185:inst2|82~9                                ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~13    ; 1                 ; 6       ;
+;      - mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6|saida~12    ; 1                 ; 6       ;
+; SW[10]                                                                        ;                   ;         ;
+; SW[9]                                                                         ;                   ;         ;
+; SW[0]                                                                         ;                   ;         ;
+; SW[16]                                                                        ;                   ;         ;
+;      - somsub:inst|mux2:inst10|saida~0                                        ; 0                 ; 6       ;
+;      - somsub:inst|somador:inst3|Cout~0                                       ; 0                 ; 6       ;
+;      - somsub:inst|somador:inst3|S~1                                          ; 0                 ; 6       ;
+;      - somsub:inst|mux2:inst11|saida~0                                        ; 0                 ; 6       ;
+;      - somsub:inst|mux2:inst19|saida~0                                        ; 0                 ; 6       ;
+;      - somsub:inst|mux2:inst18|saida~0                                        ; 0                 ; 6       ;
+;      - somsub:inst|mux2:inst13|saida~0                                        ; 0                 ; 6       ;
+;      - somsub:inst|mux2:inst12|saida~0                                        ; 0                 ; 6       ;
+;      - inst3~0                                                                ; 0                 ; 6       ;
+;      - somsub:inst|somador:inst8|S~0                                          ; 0                 ; 6       ;
+;      - somsub:inst|somador:inst8|Cout~0                                       ; 0                 ; 6       ;
+; SW[1]                                                                         ;                   ;         ;
+; SW[2]                                                                         ;                   ;         ;
+; SW[6]                                                                         ;                   ;         ;
+; SW[5]                                                                         ;                   ;         ;
+; SW[4]                                                                         ;                   ;         ;
+; SW[3]                                                                         ;                   ;         ;
 ; SW[7]                                                                         ;                   ;         ;
 +-------------------------------------------------------------------------------+-------------------+---------+
 
@@ -1786,39 +1790,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                   ; Fan-Out ;
 +------------------------------------------------------------------------+---------+
 ; SW[17]                                                                 ; 46      ;
+; inst59                                                                 ; 21      ;
 ; SW[7]                                                                  ; 16      ;
-; inst59                                                                 ; 13      ;
-; somsub:inst|somador:inst1|S~14                                         ; 13      ;
-; SW[15]                                                                 ; 12      ;
+; SW[15]                                                                 ; 13      ;
+; SW[13]                                                                 ; 13      ;
 ; SW[5]                                                                  ; 12      ;
-; SW[13]                                                                 ; 12      ;
-; SW[8]                                                                  ; 11      ;
-; SW[0]                                                                  ; 11      ;
 ; SW[16]                                                                 ; 11      ;
+; SW[0]                                                                  ; 11      ;
+; SW[14]                                                                 ; 11      ;
+; SW[11]                                                                 ; 11      ;
+; SW[8]                                                                  ; 11      ;
 ; conversorbinbcd:inst21|74185:inst|43~5                                 ; 11      ;
 ; somsub:inst|somador:inst8|S~0                                          ; 11      ;
-; somsub:inst|somador:inst3|S~1                                          ; 11      ;
+; somsub:inst|somador:inst3|S~0                                          ; 11      ;
 ; somsub:inst|somador:inst1|S~10                                         ; 11      ;
 ; somsub:inst|somador:inst1|S~8                                          ; 11      ;
 ; somsub:inst|somador:inst1|S~6                                          ; 11      ;
 ; SW[3]                                                                  ; 10      ;
-; SW[11]                                                                 ; 10      ;
 ; SW[6]                                                                  ; 10      ;
-; SW[14]                                                                 ; 10      ;
+; SW[12]                                                                 ; 10      ;
 ; conversorbinbcd:inst21|74185:inst|41~7                                 ; 10      ;
+; somsub:inst|somador:inst1|S~14                                         ; 10      ;
 ; somsub:inst|somador:inst1|S~12                                         ; 10      ;
+; SW[4]                                                                  ; 9       ;
 ; SW[1]                                                                  ; 9       ;
 ; SW[9]                                                                  ; 9       ;
-; SW[4]                                                                  ; 9       ;
-; SW[12]                                                                 ; 9       ;
+; SW[10]                                                                 ; 9       ;
 ; conversorbinbcd:inst21|74185:inst|45~2                                 ; 9       ;
 ; SW[2]                                                                  ; 8       ;
-; SW[10]                                                                 ; 8       ;
 ; somsub:inst1|somador:inst2|Cout~2                                      ; 8       ;
 ; conversorbinbcd:inst7|74185:inst|45~2                                  ; 8       ;
+; conversorbinbcd:inst21|74185:inst|81~1                                 ; 8       ;
+; conversorbinbcd:inst21|74185:inst1|82~0                                ; 8       ;
+; conversorbinbcd:inst21|74185:inst|82~1                                 ; 8       ;
 ; mux2barramento:inst6|mux2:inst2|saida~0                                ; 8       ;
 ; conversorbinbcd:inst25|74185:inst|45~2                                 ; 8       ;
-; somsub:inst|somador:inst8|Cout~0                                       ; 8       ;
 ; conversorbinbcd:inst7|74185:inst2|45~0                                 ; 7       ;
 ; conversorbinbcd:inst7|74185:inst2|43~0                                 ; 7       ;
 ; conversorbinbcd:inst7|74185:inst2|41~0                                 ; 7       ;
@@ -1829,9 +1835,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; conversorbinbcd:inst7|74185:inst|41~2                                  ; 7       ;
 ; conversorbinbcd:inst7|74185:inst|43~2                                  ; 7       ;
 ; conversorbinbcd:inst21|74185:inst1|81~2                                ; 7       ;
-; conversorbinbcd:inst21|74185:inst|81~1                                 ; 7       ;
-; conversorbinbcd:inst21|74185:inst1|82~0                                ; 7       ;
-; conversorbinbcd:inst21|74185:inst|82~1                                 ; 7       ;
 ; conversorbinbcd:inst25|74185:inst2|45~0                                ; 7       ;
 ; conversorbinbcd:inst25|74185:inst2|43~0                                ; 7       ;
 ; conversorbinbcd:inst25|74185:inst2|41~0                                ; 7       ;
@@ -1846,34 +1849,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; conversorbinbcd:inst25|74185:inst1|41~2                                ; 7       ;
 ; conversorbinbcd:inst25|74185:inst|41~2                                 ; 7       ;
 ; conversorbinbcd:inst25|74185:inst|43~2                                 ; 7       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6|saida~0    ; 7       ;
+; conversorbinbcd:inst25|74185:inst|82~0                                 ; 5       ;
+; conversorbinbcd:inst25|74185:inst|81~2                                 ; 5       ;
+; conversorbinbcd:inst25|74185:inst|48~0                                 ; 5       ;
 ; conversorbinbcd:inst7|74185:inst|82~0                                  ; 5       ;
 ; conversorbinbcd:inst7|74185:inst|81~2                                  ; 5       ;
 ; conversorbinbcd:inst7|74185:inst|48                                    ; 5       ;
+; somsub:inst|somador:inst8|Cout~0                                       ; 5       ;
 ; somsub:inst|somador:inst1|S~2                                          ; 5       ;
-; conversorbinbcd:inst25|74185:inst2|82~9                                ; 4       ;
-; mux2barramento3_0:instoo|mux2:inst5|saida~0                            ; 4       ;
+; conversorbinbcd:inst25|74185:inst1|82~0                                ; 4       ;
+; mux2barramento3_0:instoo|mux2:inst3|saida~0                            ; 4       ;
 ; conversorbinbcd:inst7|74185:inst2|81~0                                 ; 4       ;
 ; conversorbinbcd:inst7|74185:inst1|82~0                                 ; 4       ;
-; mux2barramento3_0:inst30|mux2:inst5|saida~0                            ; 4       ;
-; conversorbinbcd:inst25|74185:inst2|81~0                                ; 4       ;
-; conversorbinbcd:inst25|74185:inst|82~0                                 ; 4       ;
-; conversorbinbcd:inst25|74185:inst|81~2                                 ; 4       ;
-; conversorbinbcd:inst25|74185:inst1|82~0                                ; 4       ;
-; conversorbinbcd:inst25|74185:inst|48                                   ; 4       ;
+; mux2barramento3_0:inst30|mux2:inst3|saida~0                            ; 4       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst|saida~0      ; 4       ;
 ; somsub:inst|somador:inst1|S~4                                          ; 4       ;
 ; conversorbinbcd:inst7|74185:inst2|82~0                                 ; 3       ;
-; conversorbinbcd:inst21|74185:inst2|41                                  ; 3       ;
-; conversorbinbcd:inst21|74185:inst2|43~0                                ; 3       ;
+; conversorbinbcd:inst25|74185:inst2|81~0                                ; 3       ;
 ; conversorbinbcd:inst21|74185:inst|45~1                                 ; 3       ;
 ; somsub:inst1|somador:inst6|Cout~0                                      ; 3       ;
 ; mux2barramento:inst6|mux2:inst4|saida~0                                ; 3       ;
 ; mux2barramento:inst6|mux2:inst3|saida~0                                ; 3       ;
 ; conversorbinbcd:inst21|74185:inst|43~0                                 ; 3       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~3     ; 2       ;
 ; mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst3|saida~0  ; 2       ;
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst3|saida~0     ; 2       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4|saida~0     ; 2       ;
+; conversorbinbcd:inst25|74185:inst2|82~0                                ; 2       ;
+; conversorbinbcd:inst21|74185:inst2|41                                  ; 2       ;
+; conversorbinbcd:inst21|74185:inst2|43~0                                ; 2       ;
 ; conversorbinbcd:inst21|74185:inst1|18~0                                ; 2       ;
 ; conversorbinbcd:inst21|74185:inst1|41~3                                ; 2       ;
 ; conversorbinbcd:inst21|74185:inst|14~1                                 ; 2       ;
@@ -1883,7 +1885,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; conversorbinbcd:inst21|74185:inst|43~2                                 ; 2       ;
 ; mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst6|saida~3  ; 1       ;
 ; mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst6|saida~12 ; 1       ;
-; conversorbinbcd:inst25|74185:inst2|82~3                                ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6|saida~3     ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6|saida~12    ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~3     ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~13    ; 1       ;
 ; conversorbinbcd:inst21|74185:inst1|41~5                                ; 1       ;
 ; mux2barramento3_0:instoo|mux2:inst6|saida~0                            ; 1       ;
 ; mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst2|saida~0  ; 1       ;
@@ -1934,18 +1939,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; conversorbinbcd:inst7|74185:inst|43~1                                  ; 1       ;
 ; conversorbinbcd:inst7|74185:inst|43~0                                  ; 1       ;
 ; mux2barramento3_0:inst30|mux2:inst6|saida~0                            ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst|saida~1      ; 1       ;
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst2|saida~0     ; 1       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4|saida~1     ; 1       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~2     ; 1       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6|saida~0     ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst3|saida~1     ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4|saida~0     ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5|saida~12    ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst|saida~2     ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst|saida~1     ; 1       ;
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst|saida~0     ; 1       ;
-; decoder7:inst9|WideOr6~0                                               ; 1       ;
-; decoder7:inst27|WideOr6~0                                              ; 1       ;
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst1|saida~1    ; 1       ;
 ; decoder7:inst27|WideOr5~0                                              ; 1       ;
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst1|saida~0    ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2|saida~2    ; 1       ;
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2|saida~1    ; 1       ;
-; decoder7:inst27|WideOr4~0                                              ; 1       ;
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2|saida~0    ; 1       ;
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst3|saida~0    ; 1       ;
 ; decoder7:inst9|WideOr3~0                                               ; 1       ;
@@ -1956,13 +1962,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst5|saida~0    ; 1       ;
 ; decoder7:inst9|WideOr1~0                                               ; 1       ;
 ; decoder7:inst27|WideOr1~0                                              ; 1       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6|saida~3    ; 1       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6|saida~2    ; 1       ;
+; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6|saida~0    ; 1       ;
+; decoder7:inst9|WideOr0~0                                               ; 1       ;
 ; conversorbinbcd:inst21|74185:inst1|81~1                                ; 1       ;
 ; conversorbinbcd:inst21|74185:inst1|81~0                                ; 1       ;
 ; conversorbinbcd:inst21|74185:inst|81~0                                 ; 1       ;
 ; conversorbinbcd:inst21|74185:inst|82~0                                 ; 1       ;
-; mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6|saida~1    ; 1       ;
+; decoder7:inst27|WideOr0~0                                              ; 1       ;
 ; conversorbinbcd:inst25|74185:inst|81~1                                 ; 1       ;
 ; conversorbinbcd:inst25|74185:inst|81~0                                 ; 1       ;
 ; conversorbinbcd:inst25|74185:inst1|81~1                                ; 1       ;
@@ -2007,6 +2013,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; conversorbinbcd:inst21|74185:inst|41~2                                 ; 1       ;
 ; conversorbinbcd:inst21|74185:inst|41~1                                 ; 1       ;
 ; conversorbinbcd:inst21|74185:inst|41~0                                 ; 1       ;
+; somsub:inst|mux2:inst12|saida~0                                        ; 1       ;
+; somsub:inst|mux2:inst13|saida~0                                        ; 1       ;
+; somsub:inst|mux2:inst18|saida~0                                        ; 1       ;
+; somsub:inst|mux2:inst19|saida~0                                        ; 1       ;
+; somsub:inst|mux2:inst11|saida~0                                        ; 1       ;
+; somsub:inst|somador:inst3|S~1                                          ; 1       ;
+; somsub:inst|somador:inst3|Cout~0                                       ; 1       ;
+; somsub:inst|mux2:inst10|saida~0                                        ; 1       ;
 ; decoder7:inst26|WideOr0~0                                              ; 1       ;
 ; conversorbinbcd:inst25|74185:inst1|45~1                                ; 1       ;
 ; conversorbinbcd:inst25|74185:inst1|45~0                                ; 1       ;
@@ -2020,14 +2034,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; conversorbinbcd:inst25|74185:inst|45~0                                 ; 1       ;
 ; conversorbinbcd:inst25|74185:inst|43~1                                 ; 1       ;
 ; conversorbinbcd:inst25|74185:inst|43~0                                 ; 1       ;
-; somsub:inst|somador:inst3|S~0                                          ; 1       ;
-; somsub:inst|somador:inst3|Cout~0                                       ; 1       ;
-; somsub:inst|mux2:inst10|saida~0                                        ; 1       ;
-; somsub:inst|mux2:inst11|saida~0                                        ; 1       ;
-; somsub:inst|mux2:inst12|saida~0                                        ; 1       ;
-; somsub:inst|mux2:inst13|saida~0                                        ; 1       ;
-; somsub:inst|mux2:inst18|saida~0                                        ; 1       ;
-; somsub:inst|mux2:inst19|saida~0                                        ; 1       ;
 ; somsub:inst|somador:inst1|S~13                                         ; 1       ;
 ; somsub:inst|somador:inst1|S~11                                         ; 1       ;
 ; somsub:inst|somador:inst1|S~9                                          ; 1       ;
@@ -2043,21 +2049,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 196 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 26 / 3,315 ( < 1 % )   ;
-; C4 interconnects            ; 124 / 60,840 ( < 1 % ) ;
-; Direct links                ; 53 / 94,460 ( < 1 % )  ;
+; Block interconnects         ; 203 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 21 / 3,315 ( < 1 % )   ;
+; C4 interconnects            ; 157 / 60,840 ( < 1 % ) ;
+; Direct links                ; 49 / 94,460 ( < 1 % )  ;
 ; Global clocks               ; 0 / 16 ( 0 % )         ;
-; Local interconnects         ; 108 / 33,216 ( < 1 % ) ;
-; R24 interconnects           ; 47 / 3,091 ( 2 % )     ;
-; R4 interconnects            ; 128 / 81,294 ( < 1 % ) ;
+; Local interconnects         ; 100 / 33,216 ( < 1 % ) ;
+; R24 interconnects           ; 48 / 3,091 ( 2 % )     ;
+; R4 interconnects            ; 225 / 81,294 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 14.13) ; Number of LABs  (Total = 16) ;
+; Number of Logic Elements  (Average = 14.25) ; Number of LABs  (Total = 16) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 0                            ;
 ; 2                                           ; 0                            ;
@@ -2065,15 +2071,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                           ; 0                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
+; 7                                           ; 1                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
+; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 4                            ;
-; 14                                          ; 3                            ;
-; 15                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 3                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 2                            ;
 ; 16                                          ; 7                            ;
 +---------------------------------------------+------------------------------+
 
@@ -2081,7 +2087,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 14.06) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced  (Average = 14.19) ; Number of LABs  (Total = 16) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
@@ -2090,15 +2096,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
+; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 4                            ;
-; 14                                           ; 3                            ;
-; 15                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 3                            ;
 ; 16                                           ; 6                            ;
 +----------------------------------------------+------------------------------+
 
@@ -2106,47 +2112,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.06) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced Out  (Average = 7.62) ; Number of LABs  (Total = 16) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 0                            ;
 ; 2                                               ; 0                            ;
-; 3                                               ; 1                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 3                            ;
+; 3                                               ; 0                            ;
+; 4                                               ; 0                            ;
+; 5                                               ; 4                            ;
 ; 6                                               ; 0                            ;
-; 7                                               ; 7                            ;
-; 8                                               ; 2                            ;
-; 9                                               ; 0                            ;
+; 7                                               ; 5                            ;
+; 8                                               ; 3                            ;
+; 9                                               ; 2                            ;
 ; 10                                              ; 0                            ;
 ; 11                                              ; 0                            ;
 ; 12                                              ; 1                            ;
-; 13                                              ; 0                            ;
-; 14                                              ; 1                            ;
+; 13                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.19) ; Number of LABs  (Total = 16) ;
+; Number of Distinct Inputs  (Average = 8.56) ; Number of LABs  (Total = 16) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
 ; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 7                            ;
-; 6                                           ; 1                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 5                            ;
+; 6                                           ; 2                            ;
 ; 7                                           ; 1                            ;
 ; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 3                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 0                            ;
+; 15                                          ; 2                            ;
+; 16                                          ; 0                            ;
+; 17                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -2554,7 +2561,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2562,12 +2569,12 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y0 to location X43_Y11
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y12 to location X21_Y23
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.40 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 56 output pins without output pin load capacitance assignment
     Info (306007): Pin "HEX0[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2632,17 +2639,17 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file E:/Calculadora-Digital-com-Banco-de-Registradores/output_files/Pre-Projeto.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 359 warnings
-    Info: Peak virtual memory: 4925 megabytes
-    Info: Processing ended: Fri Jun 07 20:05:32 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:06
+Info (144001): Generated suppressed messages file /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/output_files/Pre-Projeto.fit.smsg
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 359 warnings
+    Info: Peak virtual memory: 471 megabytes
+    Info: Processing ended: Fri Jul  5 08:53:12 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in E:/Calculadora-Digital-com-Banco-de-Registradores/output_files/Pre-Projeto.fit.smsg.
+The suppressed messages can be found in /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/output_files/Pre-Projeto.fit.smsg.
 
 

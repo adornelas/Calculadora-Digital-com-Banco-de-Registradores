@@ -1,0 +1,6 @@
+module LetraO (
+	output Out[6:0]
+);
+
+assign Out = ~7'b0011101;
+endmodule

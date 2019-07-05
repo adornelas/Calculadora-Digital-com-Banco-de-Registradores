@@ -2127,75 +2127,75 @@ Out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 Out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Pre-Projeto|ErroC:inst33
-S0[0] <= LetraO:inst1.Out[0]
-S0[1] <= LetraO:inst1.Out[1]
-S0[2] <= LetraO:inst1.Out[2]
-S0[3] <= LetraO:inst1.Out[3]
-S0[4] <= LetraO:inst1.Out[4]
-S0[5] <= LetraO:inst1.Out[5]
-S0[6] <= LetraO:inst1.Out[6]
-S1[0] <= LetraR:inst3.Out[0]
-S1[1] <= LetraR:inst3.Out[1]
-S1[2] <= LetraR:inst3.Out[2]
-S1[3] <= LetraR:inst3.Out[3]
-S1[4] <= LetraR:inst3.Out[4]
-S1[5] <= LetraR:inst3.Out[5]
-S1[6] <= LetraR:inst3.Out[6]
-S2[0] <= LetraR:inst2.Out[0]
-S2[1] <= LetraR:inst2.Out[1]
-S2[2] <= LetraR:inst2.Out[2]
-S2[3] <= LetraR:inst2.Out[3]
-S2[4] <= LetraR:inst2.Out[4]
-S2[5] <= LetraR:inst2.Out[5]
-S2[6] <= LetraR:inst2.Out[6]
-S3[0] <= LetraE:inst.Out[0]
-S3[1] <= LetraE:inst.Out[1]
-S3[2] <= LetraE:inst.Out[2]
-S3[3] <= LetraE:inst.Out[3]
-S3[4] <= LetraE:inst.Out[4]
-S3[5] <= LetraE:inst.Out[5]
-S3[6] <= LetraE:inst.Out[6]
+|Pre-Projeto|displayerro:inst256
+Out0[0] <= LetraE:inst.Out[0]
+Out0[1] <= LetraE:inst.Out[1]
+Out0[2] <= LetraE:inst.Out[2]
+Out0[3] <= LetraE:inst.Out[3]
+Out0[4] <= LetraE:inst.Out[4]
+Out0[5] <= LetraE:inst.Out[5]
+Out0[6] <= LetraE:inst.Out[6]
+Out1[0] <= LetraR:inst1.Out[0]
+Out1[1] <= LetraR:inst1.Out[1]
+Out1[2] <= LetraR:inst1.Out[2]
+Out1[3] <= LetraR:inst1.Out[3]
+Out1[4] <= LetraR:inst1.Out[4]
+Out1[5] <= LetraR:inst1.Out[5]
+Out1[6] <= LetraR:inst1.Out[6]
+Out2[0] <= LetraR:inst2.Out[0]
+Out2[1] <= LetraR:inst2.Out[1]
+Out2[2] <= LetraR:inst2.Out[2]
+Out2[3] <= LetraR:inst2.Out[3]
+Out2[4] <= LetraR:inst2.Out[4]
+Out2[5] <= LetraR:inst2.Out[5]
+Out2[6] <= LetraR:inst2.Out[6]
+Out3[0] <= LetraO:inst3.Out[0]
+Out3[1] <= LetraO:inst3.Out[1]
+Out3[2] <= LetraO:inst3.Out[2]
+Out3[3] <= LetraO:inst3.Out[3]
+Out3[4] <= LetraO:inst3.Out[4]
+Out3[5] <= LetraO:inst3.Out[5]
+Out3[6] <= LetraO:inst3.Out[6]
 
 
-|Pre-Projeto|ErroC:inst33|LetraO:inst1
-Out[0] <= <VCC>
+|Pre-Projeto|displayerro:inst256|LetraE:inst
+Out[0] <= <GND>
+Out[1] <= <GND>
+Out[2] <= <GND>
+Out[3] <= <GND>
+Out[4] <= <VCC>
+Out[5] <= <VCC>
+Out[6] <= <GND>
+
+
+|Pre-Projeto|displayerro:inst256|LetraR:inst1
+Out[0] <= <GND>
+Out[1] <= <VCC>
+Out[2] <= <GND>
+Out[3] <= <VCC>
+Out[4] <= <VCC>
+Out[5] <= <VCC>
+Out[6] <= <VCC>
+
+
+|Pre-Projeto|displayerro:inst256|LetraR:inst2
+Out[0] <= <GND>
+Out[1] <= <VCC>
+Out[2] <= <GND>
+Out[3] <= <VCC>
+Out[4] <= <VCC>
+Out[5] <= <VCC>
+Out[6] <= <VCC>
+
+
+|Pre-Projeto|displayerro:inst256|LetraO:inst3
+Out[0] <= <GND>
 Out[1] <= <VCC>
 Out[2] <= <GND>
 Out[3] <= <GND>
 Out[4] <= <GND>
 Out[5] <= <VCC>
-Out[6] <= <GND>
-
-
-|Pre-Projeto|ErroC:inst33|LetraR:inst3
-Out[0] <= <VCC>
-Out[1] <= <VCC>
-Out[2] <= <VCC>
-Out[3] <= <VCC>
-Out[4] <= <GND>
-Out[5] <= <VCC>
-Out[6] <= <GND>
-
-
-|Pre-Projeto|ErroC:inst33|LetraR:inst2
-Out[0] <= <VCC>
-Out[1] <= <VCC>
-Out[2] <= <VCC>
-Out[3] <= <VCC>
-Out[4] <= <GND>
-Out[5] <= <VCC>
-Out[6] <= <GND>
-
-
-|Pre-Projeto|ErroC:inst33|LetraE:inst
-Out[0] <= <GND>
-Out[1] <= <VCC>
-Out[2] <= <VCC>
-Out[3] <= <GND>
-Out[4] <= <GND>
-Out[5] <= <GND>
-Out[6] <= <GND>
+Out[6] <= <VCC>
 
 
 |Pre-Projeto|mux2barramento3_0:inst30
