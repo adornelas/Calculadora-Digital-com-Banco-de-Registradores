@@ -27,7 +27,7 @@ module controlador (
 	input   		clk,
 	output reg [3:0] linhaN,
 	input 	  [3:0] colunaN,
-	output reg [3:0] tecla,
+	output reg [7:0] tecla,
 	output ready
 	);
 	

@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 656 -112 824 -96)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "IGUAL" (rect 5 0 39 10)(font "Arial" ))
+	(text "IGUAL" (rect 5 0 38 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ applicable agreement for further details.
 	(input)
 	(rect 656 -64 824 -48)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "NumA[7..0]" (rect 5 0 59 10)(font "Arial" ))
+	(text "NumA[7..0]" (rect 5 0 58 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,26 +55,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 656 -48 824 -32)
-	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "NumB[15..8]" (rect 5 0 65 10)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 592 -32 656 -16))
-)
-(pin
-	(input)
 	(rect 656 -32 824 -16)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
-	(text "AdcSub" (rect 5 0 44 10)(font "Arial" ))
+	(text "AdcSub" (rect 5 0 43 10)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -86,6 +69,23 @@ applicable agreement for further details.
 	)
 	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
 	(annotation_block (location)(rect 600 -16 656 0))
+)
+(pin
+	(input)
+	(rect 656 -48 824 -32)
+	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
+	(text "NumB[7..0]" (rect 5 0 59 10)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 149 16)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 592 -32 656 -16))
 )
 (pin
 	(output)
@@ -2085,6 +2085,11 @@ applicable agreement for further details.
 (connector
 	(pt 1488 600)
 	(pt 1712 600)
+	(bus)
+)
+(connector
+	(pt 680 600)
+	(pt 1344 600)
 	(bus)
 )
 (junction (pt 1120 32))

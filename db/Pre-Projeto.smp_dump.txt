@@ -1,16 +1,36 @@
 
 State Machine - |Projeto|maquina:inst2|nextstate
-Name nextstate.ESPERA_B0 nextstate.ENTRADA_B nextstate.ESPERA_A0 nextstate.ENTRADA_A nextstate.MOSTRA_RESULTADO 
-nextstate.ENTRADA_A 0 0 0 0 0 
-nextstate.ESPERA_A0 0 0 1 1 0 
-nextstate.ENTRADA_B 0 1 0 1 0 
-nextstate.ESPERA_B0 1 0 0 1 0 
-nextstate.MOSTRA_RESULTADO 0 0 0 1 1 
+Name nextstate.ESPERA_RESGATA_B nextstate.RESGATA_B nextstate.ESPERA_RESGATA_A nextstate.RESGATA_A nextstate.ESPERA_ARMAZENA_RESULTADO nextstate.ARMAZENA_RESULTADO nextstate.MOSTRA_RESULTADO nextstate.ESPERA_ARMAZENA_B nextstate.ARMAZENA_B nextstate.ESPERA_ARMAZENA_A nextstate.ARMAZENA_A nextstate.ESPERA_B nextstate.ENTRADA_B nextstate.ESPERA_A nextstate.ENTRADA_A 
+nextstate.ENTRADA_A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+nextstate.ESPERA_A 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+nextstate.ENTRADA_B 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+nextstate.ESPERA_B 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+nextstate.ARMAZENA_A 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+nextstate.ESPERA_ARMAZENA_A 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+nextstate.ARMAZENA_B 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+nextstate.ESPERA_ARMAZENA_B 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+nextstate.MOSTRA_RESULTADO 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+nextstate.ARMAZENA_RESULTADO 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+nextstate.ESPERA_ARMAZENA_RESULTADO 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+nextstate.RESGATA_A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+nextstate.ESPERA_RESGATA_A 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+nextstate.RESGATA_B 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nextstate.ESPERA_RESGATA_B 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |Projeto|maquina:inst2|state
-Name state.ESPERA_B0 state.ENTRADA_B state.ESPERA_A0 state.ENTRADA_A state.MOSTRA_RESULTADO 
-state.ENTRADA_A 0 0 0 0 0 
-state.ESPERA_A0 0 0 1 1 0 
-state.ENTRADA_B 0 1 0 1 0 
-state.ESPERA_B0 1 0 0 1 0 
-state.MOSTRA_RESULTADO 0 0 0 1 1 
+Name state.ESPERA_RESGATA_B state.RESGATA_B state.ESPERA_RESGATA_A state.RESGATA_A state.ESPERA_ARMAZENA_RESULTADO state.ARMAZENA_RESULTADO state.MOSTRA_RESULTADO state.ESPERA_ARMAZENA_B state.ARMAZENA_B state.ESPERA_ARMAZENA_A state.ARMAZENA_A state.ESPERA_B state.ENTRADA_B state.ESPERA_A state.ENTRADA_A 
+state.ENTRADA_A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.ESPERA_A 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ENTRADA_B 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ESPERA_B 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ARMAZENA_A 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ESPERA_ARMAZENA_A 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ARMAZENA_B 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ESPERA_ARMAZENA_B 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.MOSTRA_RESULTADO 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ARMAZENA_RESULTADO 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ESPERA_ARMAZENA_RESULTADO 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.RESGATA_A 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ESPERA_RESGATA_A 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RESGATA_B 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ESPERA_RESGATA_B 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

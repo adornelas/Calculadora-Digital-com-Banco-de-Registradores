@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Pre-Projeto">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Projeto|maquina:inst2|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_qpi.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

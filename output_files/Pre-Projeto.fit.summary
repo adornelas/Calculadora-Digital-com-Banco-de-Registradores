@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu Jul 11 12:37:48 2019
-Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Fitter Status : Successful - Thu Jul 11 21:47:20 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Pre-Projeto
 Top-level Entity Name : Projeto
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 361 / 33,216 ( 1 % )
-    Total combinational functions : 354 / 33,216 ( 1 % )
-    Dedicated logic registers : 148 / 33,216 ( < 1 % )
-Total registers : 148
+Total logic elements : 639 / 33,216 ( 2 % )
+    Total combinational functions : 602 / 33,216 ( 2 % )
+    Dedicated logic registers : 256 / 33,216 ( < 1 % )
+Total registers : 256
 Total pins : 95 / 475 ( 20 % )
 Total virtual pins : 0
 Total memory bits : 0 / 483,840 ( 0 % )
