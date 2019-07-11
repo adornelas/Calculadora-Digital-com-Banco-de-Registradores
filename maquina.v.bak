@@ -1,0 +1,148 @@
+module maquina(
+	input logic clk,
+	input logic reset,
+	input logic ready,
+	input logic [3:0] teclas,
+	output logic [7:0] saidaA, saidaB,
+	output logic sinal,
+	output logic igual
+);
+
+typedef enum logic [4:0] {ENTRADA_A0, ESPERA_A0, ENTRADA_A1, ESPERA_A1, ENTRADA_A2, ESPERA_A2, ENTRADA_A3, ESPERA_A3, ENTRADA_A4, ESPERA_A4, ENTRADA_A5, ESPERA_A5, ENTRADA_A6, ESPERA_A6,ENTRADA_B0, ESPERA_B0, ENTRADA_B1, ESPERA_B1, ENTRADA_B2, ESPERA_B2, ENTRADA_B3, ESPERA_B3, ENTRADA_B4, ESPERA_B4, ENTRADA_B5, ESPERA_B5, ENTRADA_B6, ESPERA_B6 , DECIDE_SINAL, MOSTRA_RESULTADO, ERRO} statetype;
+	statetype state, nextstate;
+	
+always_ff @(posedge clk, posedge reset)
+		if (reset) state <= ENTRADA_A;
+		else state <= nextstate;
+		
+always_ff @(posedge clock, posedge reset)
+	if (reset) begin 
+		saidaA = 7'b0000000; 
+		saidaB = 7'b0000000; 
+		sinal = '0;
+		igual = '0;
+	end
+	else
+		case (state)
+			ENTRADA_A0: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_A0 = teclas;
+				nextstate = ESPERA_A0;
+			end
+			else  nextstate = ENTRADA_A0;
+			
+			ESPERA_A0: if (~ready) nextstate = ENTRADA_A1;
+									else nextstate = ESPERA_A0;
+									
+			ENTRADA_A1: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_A1 = teclas;
+				nextstate = ESPERA_A1;
+			end
+			else  if (*TECLADESINAL*) begin 
+				saidaA[0] = ENTRADA_A0;
+			end
+			else	nextstate = ENTRADA_A1;
+			
+			ESPERA_A1: if (~ready) nextstate = ENTRADA_A2;
+									else nextstate = ESPERA_A1;
+			
+			ENTRADA_A2: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_A2 = teclas;
+				nextstate = ESPERA_A2;
+			end
+			else  nextstate = ENTRADA_A2;
+			
+			ESPERA_A2: if (~ready) nextstate = ENTRADA_A3;
+									else nextstate = ESPERA_A2;
+			
+			ENTRADA_A3: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_A3 = teclas;
+				nextstate = ESPERA_A3;
+			end
+			else  nextstate = ENTRADA_A3;
+			
+			ESPERA_A3: if (~ready) nextstate = ENTRADA_A4;
+									else nextstate = ESPERA_A3;
+			
+			ENTRADA_A4: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_A4 = teclas;
+				nextstate = ESPERA_A4;
+			end
+			else  nextstate = ENTRADA_A4;
+			
+			ESPERA_A4: if (~ready) nextstate = ENTRADA_A5;
+									else nextstate = ESPERA_A4;
+									
+			ENTRADA_A5: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_A5 = teclas;
+				nextstate = ESPERA_A5;
+			end
+			else  nextstate = ENTRADA_A5;
+			
+			ESPERA_A5: if (~ready) nextstate = ENTRADA_A6;
+									else nextstate = ESPERA_A5;
+									
+			ENTRADA_A6: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_A6 = teclas;
+				nextstate = ERRO;
+			end
+			else  nextstate = ENTRADA_A6;
+
+			ENTRADA_B0: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_B0 = teclas;
+				nextstate = ESPERA_B0;
+			end
+			else  nextstate = ENTRADA_B0;
+			
+			ESPERA_B0: if (~ready) nextstate = ENTRADA_B1;
+									else nextstate = ESPERA_B0;
+									
+			ENTRADA_B1: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_B1 = teclas;
+				nextstate = ESPERA_B1;
+			end
+			else  nextstate = ENTRADA_B1;
+			
+			ESPERA_B1: if (~ready) nextstate = ENTRADA_B2;
+									else nextstate = ESPERA_B1;
+			
+			ENTRADA_B2: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_B2 = teclas;
+				nextstate = ESPERA_B2;
+			end
+			else  nextstate = ENTRADA_B2;
+			
+			ESPERA_B2: if (~ready) nextstate = ENTRADA_B3;
+									else nextstate = ESPERA_B2;
+			
+			ENTRADA_B3: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_B3 = teclas;
+				nextstate = ESPERA_B3;
+			end
+			else  nextstate = ENTRADA_B3;
+			
+			ESPERA_B3: if (~ready) nextstate = ENTRADA_B4;
+									else nextstate = ESPERA_B3;
+			
+			ENTRADA_B4: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_B4 = teclas;
+				nextstate = ESPERA_B4;
+			end
+			else  nextstate = ENTRADA_B4;
+			
+			ESPERA_B4: if (~ready) nextstate = ENTRADA_B5;
+									else nextstate = ESPERA_B4;
+									
+			ENTRADA_B5: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_B5 = teclas;
+				nextstate = ESPERA_B5;
+			end
+			else  nextstate = ENTRADA_B5;
+			
+			ESPERA_B5: if (~ready) nextstate = ENTRADA_B6;
+									else nextstate = ESPERA_B5;
+									
+			ENTRADA_B6: if (ready & teclas<10 & *TECLADESINAL*) begin
+				ENTRADA_B6 = teclas;
+				nextstate = ERRO;
+			end
+			else  nextstate = ENTRADA_B6;									

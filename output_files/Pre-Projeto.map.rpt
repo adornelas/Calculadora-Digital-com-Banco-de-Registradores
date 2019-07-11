@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Pre-Projeto
-Fri Jul  5 08:52:55 2019
+Wed Jul 10 23:19:46 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,10 +13,19 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |Projeto|maquina:inst2|nextstate
+  9. State Machine - |Projeto|maquina:inst2|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Port Connectivity Checks: "teclado:inst1|controlador:U0|Debouncer:d3"
+ 16. Port Connectivity Checks: "teclado:inst1|controlador:U0|Debouncer:d2"
+ 17. Port Connectivity Checks: "teclado:inst1|controlador:U0|Debouncer:d1"
+ 18. Port Connectivity Checks: "teclado:inst1|controlador:U0|Debouncer:d0"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +51,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul  5 08:52:55 2019           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 10 23:19:46 2019           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Pre-Projeto                                     ;
-; Top-level Entity Name              ; Pre-Projeto                                     ;
+; Top-level Entity Name              ; Projeto                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 228                                             ;
-;     Total combinational functions  ; 228                                             ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 74                                              ;
+; Total logic elements               ; 479                                             ;
+;     Total combinational functions  ; 443                                             ;
+;     Dedicated logic registers      ; 204                                             ;
+; Total registers                    ; 204                                             ;
+; Total pins                         ; 95                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +74,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; Pre-Projeto        ; Pre-Projeto        ;
+; Top-level entity name                                                      ; Projeto            ; Pre-Projeto        ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Verilog Show LMF Mapping Messages                                          ; Off                ;                    ;
 ; Verilog Version                                                            ; SystemVerilog_2005 ; Verilog_2001       ;
@@ -176,138 +185,245 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; LetraE.v                         ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/LetraE.v               ;         ;
 ; LetraR.v                         ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/LetraR.v               ;         ;
 ; LetraO.v                         ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/LetraO.v               ;         ;
+; ignoraprimeirobit.bdf            ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/ignoraprimeirobit.bdf  ;         ;
+; Projeto.bdf                      ; yes             ; User Block Diagram/Schematic File  ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/Projeto.bdf            ;         ;
+; maquina.v                        ; yes             ; User Verilog HDL File              ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/maquina.v              ;         ;
+; teclado.v                        ; yes             ; Auto-Found Verilog HDL File        ; /home/andre/UnB/4SEM/Lab CL/ProjetoFinal/Calculadora-Digital-com-Banco-de-Registradores/teclado.v              ;         ;
 ; 74185.bdf                        ; yes             ; Megafunction                       ; /home/andre/altera/13.0sp1/quartus/libraries/others/maxplus2/74185.bdf                                         ;         ;
 +----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 228    ;
-;                                             ;        ;
-; Total combinational functions               ; 228    ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 143    ;
-;     -- 3 input functions                    ; 58     ;
-;     -- <=2 input functions                  ; 27     ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 221    ;
-;     -- arithmetic mode                      ; 7      ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-;     -- Dedicated logic registers            ; 0      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 74     ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; SW[17] ;
-; Maximum fan-out                             ; 46     ;
-; Total fan-out                               ; 850    ;
-; Average fan-out                             ; 2.81   ;
-+---------------------------------------------+--------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 479      ;
+;                                             ;          ;
+; Total combinational functions               ; 443      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 166      ;
+;     -- 3 input functions                    ; 131      ;
+;     -- <=2 input functions                  ; 146      ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 329      ;
+;     -- arithmetic mode                      ; 114      ;
+;                                             ;          ;
+; Total registers                             ; 204      ;
+;     -- Dedicated logic registers            ; 204      ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 95       ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 204      ;
+; Total fan-out                               ; 1980     ;
+; Average fan-out                             ; 2.67     ;
++---------------------------------------------+----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
-; |Pre-Projeto                    ; 228 (2)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |Pre-Projeto                                                               ; work         ;
-;    |conversorbinbcd:inst21|     ; 44 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21                                        ; work         ;
-;       |74185:inst1|             ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst1                            ; work         ;
-;       |74185:inst2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst2                            ; work         ;
-;       |74185:inst|              ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst21|74185:inst                             ; work         ;
-;    |conversorbinbcd:inst25|     ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst25                                        ; work         ;
-;       |74185:inst1|             ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst25|74185:inst1                            ; work         ;
-;       |74185:inst2|             ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst25|74185:inst2                            ; work         ;
-;       |74185:inst|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst25|74185:inst                             ; work         ;
-;    |conversorbinbcd:inst7|      ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst7                                         ; work         ;
-;       |74185:inst1|             ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst7|74185:inst1                             ; work         ;
-;       |74185:inst2|             ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst7|74185:inst2                             ; work         ;
-;       |74185:inst|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|conversorbinbcd:inst7|74185:inst                              ; work         ;
-;    |decoder7:inst13|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst13                                               ; work         ;
-;    |decoder7:inst14|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst14                                               ; work         ;
-;    |decoder7:inst26|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst26                                               ; work         ;
-;    |decoder7:inst27|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst27                                               ; work         ;
-;    |decoder7:inst8|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst8                                                ; work         ;
-;    |decoder7:inst9|             ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|decoder7:inst9                                                ; work         ;
-;    |mux2barramento3_0:inst30|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento3_0:inst30                                      ; work         ;
-;       |mux2:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento3_0:inst30|mux2:inst3                           ; work         ;
-;       |mux2:inst6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento3_0:inst30|mux2:inst6                           ; work         ;
-;    |mux2barramento3_0:instoo|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento3_0:instoo                                      ; work         ;
-;       |mux2:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento3_0:instoo|mux2:inst3                           ; work         ;
-;       |mux2:inst6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento3_0:instoo|mux2:inst6                           ; work         ;
-;    |mux2barramento6_0:inst1gg8| ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8                                    ; work         ;
-;       |mux2barramento3_0:inst1| ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1            ; work         ;
-;          |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst1 ; work         ;
-;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst2 ; work         ;
-;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst3 ; work         ;
-;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst4 ; work         ;
-;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst5 ; work         ;
-;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst6 ; work         ;
-;          |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst  ; work         ;
-;       |mux2barramento3_0:inst2| ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2            ; work         ;
-;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst2 ; work         ;
-;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst3 ; work         ;
-;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst4 ; work         ;
-;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst5 ; work         ;
-;          |mux2:inst6|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst6 ; work         ;
-;       |mux2barramento3_0:inst|  ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst             ; work         ;
-;          |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst1  ; work         ;
-;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst2  ; work         ;
-;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst3  ; work         ;
-;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst4  ; work         ;
-;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst5  ; work         ;
-;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst6  ; work         ;
-;          |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst   ; work         ;
-;    |mux2barramento6_0:inst24|   ; 31 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24                                      ; work         ;
-;       |mux2barramento3_0:inst1| ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1              ; work         ;
-;          |mux2:inst1|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst1   ; work         ;
-;          |mux2:inst2|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2   ; work         ;
-;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst3   ; work         ;
-;          |mux2:inst4|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst4   ; work         ;
-;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst5   ; work         ;
-;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6   ; work         ;
-;          |mux2:inst|            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst    ; work         ;
-;       |mux2barramento3_0:inst2| ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2              ; work         ;
-;          |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst1   ; work         ;
-;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst2   ; work         ;
-;          |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst3   ; work         ;
-;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst4   ; work         ;
-;          |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst5   ; work         ;
-;          |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst6   ; work         ;
-;          |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst    ; work         ;
-;       |mux2barramento3_0:inst|  ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst               ; work         ;
-;          |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst2    ; work         ;
-;          |mux2:inst3|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst3    ; work         ;
-;          |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4    ; work         ;
-;          |mux2:inst5|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5    ; work         ;
-;          |mux2:inst6|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6    ; work         ;
-;          |mux2:inst|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst     ; work         ;
-;    |mux2barramento:inst6|       ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6                                          ; work         ;
-;       |mux2:inst1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst1                               ; work         ;
-;       |mux2:inst2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst2                               ; work         ;
-;       |mux2:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst3                               ; work         ;
-;       |mux2:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst4                               ; work         ;
-;       |mux2:inst5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|mux2barramento:inst6|mux2:inst5                               ; work         ;
-;    |somsub:inst1|               ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1                                                  ; work         ;
-;       |somador:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1|somador:inst2                                    ; work         ;
-;       |somador:inst6|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst1|somador:inst6                                    ; work         ;
-;    |somsub:inst|                ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst                                                   ; work         ;
-;       |mux2:inst10|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst10                                       ; work         ;
-;       |mux2:inst11|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst11                                       ; work         ;
-;       |mux2:inst12|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst12                                       ; work         ;
-;       |mux2:inst13|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst13                                       ; work         ;
-;       |mux2:inst18|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst18                                       ; work         ;
-;       |mux2:inst19|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|mux2:inst19                                       ; work         ;
-;       |somador:inst1|           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst1                                     ; work         ;
-;       |somador:inst3|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst3                                     ; work         ;
-;       |somador:inst8|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pre-Projeto|somsub:inst|somador:inst8                                     ; work         ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Library Name ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
+; |Projeto                           ; 443 (0)           ; 204 (0)      ; 0           ; 0            ; 0       ; 0         ; 95   ; 0            ; |Projeto                                                                                ; work         ;
+;    |Pre-Projeto:inst|              ; 144 (1)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst                                                               ; work         ;
+;       |conversorbinbcd:inst21|     ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|conversorbinbcd:inst21                                        ; work         ;
+;          |74185:inst1|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|conversorbinbcd:inst21|74185:inst1                            ; work         ;
+;          |74185:inst2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|conversorbinbcd:inst21|74185:inst2                            ; work         ;
+;          |74185:inst|              ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|conversorbinbcd:inst21|74185:inst                             ; work         ;
+;       |conversorbinbcd:inst7|      ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|conversorbinbcd:inst7                                         ; work         ;
+;          |74185:inst1|             ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|conversorbinbcd:inst7|74185:inst1                             ; work         ;
+;          |74185:inst|              ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|conversorbinbcd:inst7|74185:inst                              ; work         ;
+;       |decoder7:inst13|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|decoder7:inst13                                               ; work         ;
+;       |decoder7:inst14|            ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|decoder7:inst14                                               ; work         ;
+;       |decoder7:inst8|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|decoder7:inst8                                                ; work         ;
+;       |decoder7:inst9|             ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|decoder7:inst9                                                ; work         ;
+;       |mux2barramento3_0:inst23|   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento3_0:inst23                                      ; work         ;
+;          |mux2:inst6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento3_0:inst23|mux2:inst6                           ; work         ;
+;       |mux2barramento6_0:inst1gg8| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8                                    ; work         ;
+;          |mux2barramento3_0:inst1| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1            ; work         ;
+;             |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst1 ; work         ;
+;             |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst2 ; work         ;
+;             |mux2:inst3|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst3 ; work         ;
+;             |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst4 ; work         ;
+;             |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst5 ; work         ;
+;             |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst6 ; work         ;
+;             |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst1|mux2:inst  ; work         ;
+;          |mux2barramento3_0:inst2| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2            ; work         ;
+;             |mux2:inst5|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst2|mux2:inst5 ; work         ;
+;          |mux2barramento3_0:inst|  ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst             ; work         ;
+;             |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst1  ; work         ;
+;             |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst2  ; work         ;
+;             |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst3  ; work         ;
+;             |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst4  ; work         ;
+;             |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst5  ; work         ;
+;             |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst6  ; work         ;
+;             |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst1gg8|mux2barramento3_0:inst|mux2:inst   ; work         ;
+;       |mux2barramento6_0:inst24|   ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24                                      ; work         ;
+;          |mux2barramento3_0:inst1| ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1              ; work         ;
+;             |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst1   ; work         ;
+;             |mux2:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst2   ; work         ;
+;             |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst3   ; work         ;
+;             |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst4   ; work         ;
+;             |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst5   ; work         ;
+;             |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst6   ; work         ;
+;             |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst    ; work         ;
+;          |mux2barramento3_0:inst2| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2              ; work         ;
+;             |mux2:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst1   ; work         ;
+;             |mux2:inst2|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst2   ; work         ;
+;             |mux2:inst3|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst3   ; work         ;
+;             |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst4   ; work         ;
+;             |mux2:inst5|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst5   ; work         ;
+;             |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst6   ; work         ;
+;             |mux2:inst|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst    ; work         ;
+;          |mux2barramento3_0:inst|  ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst               ; work         ;
+;             |mux2:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst4    ; work         ;
+;             |mux2:inst5|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst5    ; work         ;
+;             |mux2:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst|mux2:inst6    ; work         ;
+;       |mux2barramento:inst6|       ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento:inst6                                          ; work         ;
+;          |mux2:inst1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento:inst6|mux2:inst1                               ; work         ;
+;          |mux2:inst2|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento:inst6|mux2:inst2                               ; work         ;
+;          |mux2:inst3|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento:inst6|mux2:inst3                               ; work         ;
+;          |mux2:inst4|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento:inst6|mux2:inst4                               ; work         ;
+;          |mux2:inst5|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento:inst6|mux2:inst5                               ; work         ;
+;          |mux2:inst6|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento:inst6|mux2:inst6                               ; work         ;
+;          |mux2:inst7|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|mux2barramento:inst6|mux2:inst7                               ; work         ;
+;       |somsub:inst1|               ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst1                                                  ; work         ;
+;          |somador:inst2|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst1|somador:inst2                                    ; work         ;
+;          |somador:inst4|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst1|somador:inst4                                    ; work         ;
+;          |somador:inst6|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst1|somador:inst6                                    ; work         ;
+;          |somador:inst8|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst1|somador:inst8                                    ; work         ;
+;       |somsub:inst|                ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst                                                   ; work         ;
+;          |mux2:inst10|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst|mux2:inst10                                       ; work         ;
+;          |mux2:inst11|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst|mux2:inst11                                       ; work         ;
+;          |mux2:inst12|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst|mux2:inst12                                       ; work         ;
+;          |mux2:inst13|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst|mux2:inst13                                       ; work         ;
+;          |mux2:inst18|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst|mux2:inst18                                       ; work         ;
+;          |mux2:inst19|             ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst|mux2:inst19                                       ; work         ;
+;          |somador:inst1|           ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst|somador:inst1                                     ; work         ;
+;          |somador:inst3|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|Pre-Projeto:inst|somsub:inst|somador:inst3                                     ; work         ;
+;    |maquina:inst2|                 ; 71 (71)           ; 76 (76)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|maquina:inst2                                                                  ; work         ;
+;    |teclado:inst1|                 ; 228 (0)           ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|teclado:inst1                                                                  ; work         ;
+;       |controlador:U0|             ; 228 (60)          ; 128 (40)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|teclado:inst1|controlador:U0                                                   ; work         ;
+;          |Debouncer:d0|            ; 42 (42)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|teclado:inst1|controlador:U0|Debouncer:d0                                      ; work         ;
+;          |Debouncer:d1|            ; 42 (42)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|teclado:inst1|controlador:U0|Debouncer:d1                                      ; work         ;
+;          |Debouncer:d2|            ; 42 (42)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|teclado:inst1|controlador:U0|Debouncer:d2                                      ; work         ;
+;          |Debouncer:d3|            ; 42 (42)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Projeto|teclado:inst1|controlador:U0|Debouncer:d3                                      ; work         ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Projeto|maquina:inst2|nextstate                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++----------------------------+------------------------+------------------------+----------------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+
+; Name                       ; nextstate.ESPERA_IGUAL ; nextstate.ESPERA_SINAL ; nextstate.MOSTRA_RESULTADO ; nextstate.ESPERA_B6 ; nextstate.ENTRADA_B6 ; nextstate.ESPERA_B5 ; nextstate.ENTRADA_B5 ; nextstate.ESPERA_B4 ; nextstate.ENTRADA_B4 ; nextstate.ESPERA_B3 ; nextstate.ENTRADA_B3 ; nextstate.ESPERA_B2 ; nextstate.ENTRADA_B2 ; nextstate.ESPERA_B1 ; nextstate.ENTRADA_B1 ; nextstate.ESPERA_B0 ; nextstate.ENTRADA_B0 ; nextstate.ESPERA_A6 ; nextstate.ENTRADA_A6 ; nextstate.ESPERA_A5 ; nextstate.ENTRADA_A5 ; nextstate.ESPERA_A4 ; nextstate.ENTRADA_A4 ; nextstate.ESPERA_A3 ; nextstate.ENTRADA_A3 ; nextstate.ESPERA_A2 ; nextstate.ENTRADA_A2 ; nextstate.ESPERA_A1 ; nextstate.ENTRADA_A1 ; nextstate.ESPERA_A0 ; nextstate.ENTRADA_A0 ;
++----------------------------+------------------------+------------------------+----------------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+
+; nextstate.ENTRADA_A0       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ;
+; nextstate.ESPERA_A0        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 1                    ;
+; nextstate.ENTRADA_A1       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_A1        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_A2       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_A2        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_A3       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_A3        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_A4       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_A4        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_A5       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_A5        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_A6       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_A6        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_B0       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_B0        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_B1       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_B1        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_B2       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_B2        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_B3       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_B3        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_B4       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_B4        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_B5       ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_B5        ; 0                      ; 0                      ; 0                          ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ENTRADA_B6       ; 0                      ; 0                      ; 0                          ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_B6        ; 0                      ; 0                      ; 0                          ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.MOSTRA_RESULTADO ; 0                      ; 0                      ; 1                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_SINAL     ; 0                      ; 1                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
+; nextstate.ESPERA_IGUAL     ; 1                      ; 0                      ; 0                          ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
++----------------------------+------------------------+------------------------+----------------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Projeto|maquina:inst2|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++------------------------+--------------------+--------------------+------------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+
+; Name                   ; state.ESPERA_IGUAL ; state.ESPERA_SINAL ; state.MOSTRA_RESULTADO ; state.ESPERA_B6 ; state.ENTRADA_B6 ; state.ESPERA_B5 ; state.ENTRADA_B5 ; state.ESPERA_B4 ; state.ENTRADA_B4 ; state.ESPERA_B3 ; state.ENTRADA_B3 ; state.ESPERA_B2 ; state.ENTRADA_B2 ; state.ESPERA_B1 ; state.ENTRADA_B1 ; state.ESPERA_B0 ; state.ENTRADA_B0 ; state.ESPERA_A6 ; state.ENTRADA_A6 ; state.ESPERA_A5 ; state.ENTRADA_A5 ; state.ESPERA_A4 ; state.ENTRADA_A4 ; state.ESPERA_A3 ; state.ENTRADA_A3 ; state.ESPERA_A2 ; state.ENTRADA_A2 ; state.ESPERA_A1 ; state.ENTRADA_A1 ; state.ESPERA_A0 ; state.ENTRADA_A0 ;
++------------------------+--------------------+--------------------+------------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+
+; state.ENTRADA_A0       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ;
+; state.ESPERA_A0        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 1                ;
+; state.ENTRADA_A1       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 1                ;
+; state.ESPERA_A1        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_A2       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_A2        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_A3       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_A3        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_A4       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_A4        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_A5       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_A5        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_A6       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_A6        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_B0       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_B0        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_B1       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_B1        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_B2       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_B2        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_B3       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_B3        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_B4       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_B4        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_B5       ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_B5        ; 0                  ; 0                  ; 0                      ; 0               ; 0                ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ENTRADA_B6       ; 0                  ; 0                  ; 0                      ; 0               ; 1                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_B6        ; 0                  ; 0                  ; 0                      ; 1               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.MOSTRA_RESULTADO ; 0                  ; 0                  ; 1                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_SINAL     ; 0                  ; 1                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
+; state.ESPERA_IGUAL     ; 1                  ; 0                  ; 0                      ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 0                ; 0               ; 1                ;
++------------------------+--------------------+--------------------+------------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+-----------------+------------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; maquina:inst2|nextstate~2              ; Lost fanout        ;
+; maquina:inst2|nextstate~3              ; Lost fanout        ;
+; maquina:inst2|nextstate~4              ; Lost fanout        ;
+; maquina:inst2|nextstate~5              ; Lost fanout        ;
+; maquina:inst2|nextstate~6              ; Lost fanout        ;
+; maquina:inst2|state~4                  ; Lost fanout        ;
+; maquina:inst2|state~5                  ; Lost fanout        ;
+; maquina:inst2|state~6                  ; Lost fanout        ;
+; maquina:inst2|state~7                  ; Lost fanout        ;
+; maquina:inst2|state~8                  ; Lost fanout        ;
+; maquina:inst2|state.ESPERA_SINAL       ; Lost fanout        ;
+; maquina:inst2|nextstate.ESPERA_SINAL   ; Lost fanout        ;
+; Total Number of Removed Registers = 12 ;                    ;
++----------------------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                             ;
++---------------------------+--------------------+------------------------------------------------------------------------+
+; Register name             ; Reason for Removal ; Registers Removed due to This Register                                 ;
++---------------------------+--------------------+------------------------------------------------------------------------+
+; maquina:inst2|nextstate~2 ; Lost Fanouts       ; maquina:inst2|state.ESPERA_SINAL, maquina:inst2|nextstate.ESPERA_SINAL ;
++---------------------------+--------------------+------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -315,23 +431,74 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 204   ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 46    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 114   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Pre-Projeto|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst6|saida ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; teclado:inst1|controlador:U0|linha[0]  ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |Projeto|teclado:inst1|controlador:U0|Debouncer:d0|Counter[14]                              ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |Projeto|teclado:inst1|controlador:U0|Debouncer:d1|Counter[6]                               ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |Projeto|teclado:inst1|controlador:U0|Debouncer:d2|Counter[0]                               ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |Projeto|teclado:inst1|controlador:U0|Debouncer:d3|Counter[1]                               ;
+; 256:1              ; 4 bits    ; 680 LEs       ; 40 LEs               ; 640 LEs                ; Yes        ; |Projeto|teclado:inst1|controlador:U0|tecla[2]                                              ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; No         ; |Projeto|Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst1|mux2:inst4|saida ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "teclado:inst1|controlador:U0|Debouncer:d3" ;
++--------+--------+----------+------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                  ;
++--------+--------+----------+------------------------------------------+
+; oPulse ; Output ; Info     ; Explicitly unconnected                   ;
++--------+--------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "teclado:inst1|controlador:U0|Debouncer:d2" ;
++--------+--------+----------+------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                  ;
++--------+--------+----------+------------------------------------------+
+; oPulse ; Output ; Info     ; Explicitly unconnected                   ;
++--------+--------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "teclado:inst1|controlador:U0|Debouncer:d1" ;
++--------+--------+----------+------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                  ;
++--------+--------+----------+------------------------------------------+
+; oPulse ; Output ; Info     ; Explicitly unconnected                   ;
++--------+--------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "teclado:inst1|controlador:U0|Debouncer:d0" ;
++--------+--------+----------+------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                  ;
++--------+--------+----------+------------------------------------------+
+; oPulse ; Output ; Info     ; Explicitly unconnected                   ;
++--------+--------+----------+------------------------------------------+
 
 
 +-------------------------------+
@@ -349,7 +516,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jul  5 08:52:48 2019
+    Info: Processing started: Wed Jul 10 23:19:39 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pre-Projeto -c Pre-Projeto
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file Pre-Projeto.bdf
@@ -382,37 +549,112 @@ Info (12021): Found 1 design units, including 1 entities, in source file LetraR.
     Info (12023): Found entity 1: LetraR
 Info (12021): Found 1 design units, including 1 entities, in source file LetraO.v
     Info (12023): Found entity 1: LetraO
-Info (12127): Elaborating entity "Pre-Projeto" for the top level hierarchy
-Info (12128): Elaborating entity "mux2barramento6_0" for hierarchy "mux2barramento6_0:inst24"
-Info (12128): Elaborating entity "mux2barramento3_0" for hierarchy "mux2barramento6_0:inst24|mux2barramento3_0:inst2"
-Info (12128): Elaborating entity "mux2" for hierarchy "mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst"
-Info (12128): Elaborating entity "decoder7" for hierarchy "decoder7:inst26"
-Info (12128): Elaborating entity "conversorbinbcd" for hierarchy "conversorbinbcd:inst25"
-Info (12128): Elaborating entity "74185" for hierarchy "conversorbinbcd:inst25|74185:inst1"
-Info (12130): Elaborated megafunction instantiation "conversorbinbcd:inst25|74185:inst1"
-Info (12128): Elaborating entity "somsub" for hierarchy "somsub:inst"
-Info (12128): Elaborating entity "somador" for hierarchy "somsub:inst|somador:inst7"
-Info (12128): Elaborating entity "mux2barramento" for hierarchy "mux2barramento:inst6"
-Info (12128): Elaborating entity "displayerro" for hierarchy "displayerro:inst256"
-Info (12128): Elaborating entity "LetraE" for hierarchy "displayerro:inst256|LetraE:inst"
-Info (12128): Elaborating entity "LetraR" for hierarchy "displayerro:inst256|LetraR:inst1"
-Info (12128): Elaborating entity "LetraO" for hierarchy "displayerro:inst256|LetraO:inst3"
-Info (12128): Elaborating entity "demuxer" for hierarchy "demuxer:inst452"
-Info (12128): Elaborating entity "displaynegativo" for hierarchy "displaynegativo:inst16"
+Info (12021): Found 1 design units, including 1 entities, in source file ignoraprimeirobit.bdf
+    Info (12023): Found entity 1: ignoraprimeirobit
+Info (12021): Found 1 design units, including 1 entities, in source file Projeto.bdf
+    Info (12023): Found entity 1: Projeto
+Info (12021): Found 1 design units, including 1 entities, in source file maquina.v
+    Info (12023): Found entity 1: maquina
+Info (12127): Elaborating entity "Projeto" for the top level hierarchy
+Warning (12125): Using design file teclado.v, which is not specified as a design file for the current project, but contains definitions for 3 design units and 3 entities in project
+    Info (12023): Found entity 1: teclado
+    Info (12023): Found entity 2: controlador
+    Info (12023): Found entity 3: Debouncer
+Info (12128): Elaborating entity "teclado" for hierarchy "teclado:inst1"
+Info (12128): Elaborating entity "controlador" for hierarchy "teclado:inst1|controlador:U0"
+Info (12128): Elaborating entity "Debouncer" for hierarchy "teclado:inst1|controlador:U0|Debouncer:d0"
+Info (12128): Elaborating entity "Pre-Projeto" for hierarchy "Pre-Projeto:inst"
+Info (12128): Elaborating entity "mux2barramento6_0" for hierarchy "Pre-Projeto:inst|mux2barramento6_0:inst24"
+Info (12128): Elaborating entity "mux2barramento3_0" for hierarchy "Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2"
+Info (12128): Elaborating entity "mux2" for hierarchy "Pre-Projeto:inst|mux2barramento6_0:inst24|mux2barramento3_0:inst2|mux2:inst"
+Info (12128): Elaborating entity "decoder7" for hierarchy "Pre-Projeto:inst|decoder7:inst26"
+Info (12128): Elaborating entity "conversorbinbcd" for hierarchy "Pre-Projeto:inst|conversorbinbcd:inst25"
+Info (12128): Elaborating entity "74185" for hierarchy "Pre-Projeto:inst|conversorbinbcd:inst25|74185:inst1"
+Info (12130): Elaborated megafunction instantiation "Pre-Projeto:inst|conversorbinbcd:inst25|74185:inst1"
+Info (12128): Elaborating entity "ignoraprimeirobit" for hierarchy "Pre-Projeto:inst|ignoraprimeirobit:inst19"
+Info (12128): Elaborating entity "somsub" for hierarchy "Pre-Projeto:inst|somsub:inst"
+Info (12128): Elaborating entity "somador" for hierarchy "Pre-Projeto:inst|somsub:inst|somador:inst7"
+Info (12128): Elaborating entity "mux2barramento" for hierarchy "Pre-Projeto:inst|mux2barramento:inst6"
+Info (12128): Elaborating entity "displayerro" for hierarchy "Pre-Projeto:inst|displayerro:inst256"
+Info (12128): Elaborating entity "LetraE" for hierarchy "Pre-Projeto:inst|displayerro:inst256|LetraE:inst"
+Info (12128): Elaborating entity "LetraR" for hierarchy "Pre-Projeto:inst|displayerro:inst256|LetraR:inst1"
+Info (12128): Elaborating entity "LetraO" for hierarchy "Pre-Projeto:inst|displayerro:inst256|LetraO:inst3"
+Info (12128): Elaborating entity "demuxer" for hierarchy "Pre-Projeto:inst|demuxer:inst452"
+Info (12128): Elaborating entity "displaynegativo" for hierarchy "Pre-Projeto:inst|displaynegativo:inst16"
+Info (12128): Elaborating entity "maquina" for hierarchy "maquina:inst2"
+Warning (10230): Verilog HDL assignment warning at maquina.v(28): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(38): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(57): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(77): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(98): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(120): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(143): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(161): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(171): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(186): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(202): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(219): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(237): truncated value with size 4 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at maquina.v(256): truncated value with size 4 to match size of target (1)
+Info (10264): Verilog HDL Case Statement information at maquina.v(26): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at maquina.v(18): inferring latch(es) for variable "saidaA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at maquina.v(18): inferring latch(es) for variable "saidaB", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "saidaB[7]" at maquina.v(26)
+Info (10041): Inferred latch for "saidaA[7]" at maquina.v(26)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
     Warning (13410): Pin "HEX7[5]" is stuck at VCC
     Warning (13410): Pin "HEX7[4]" is stuck at VCC
+    Warning (13410): Pin "HEX7[3]" is stuck at VCC
+    Warning (13410): Pin "HEX7[2]" is stuck at VCC
+    Warning (13410): Pin "HEX7[1]" is stuck at VCC
+    Warning (13410): Pin "HEX7[0]" is stuck at VCC
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 302 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 228 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+Warning (21074): Design contains 32 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "GPIO_1[35]"
+    Warning (15610): No output dependent on input pin "GPIO_1[34]"
+    Warning (15610): No output dependent on input pin "GPIO_1[33]"
+    Warning (15610): No output dependent on input pin "GPIO_1[32]"
+    Warning (15610): No output dependent on input pin "GPIO_1[31]"
+    Warning (15610): No output dependent on input pin "GPIO_1[30]"
+    Warning (15610): No output dependent on input pin "GPIO_1[29]"
+    Warning (15610): No output dependent on input pin "GPIO_1[28]"
+    Warning (15610): No output dependent on input pin "GPIO_1[27]"
+    Warning (15610): No output dependent on input pin "GPIO_1[26]"
+    Warning (15610): No output dependent on input pin "GPIO_1[25]"
+    Warning (15610): No output dependent on input pin "GPIO_1[24]"
+    Warning (15610): No output dependent on input pin "GPIO_1[23]"
+    Warning (15610): No output dependent on input pin "GPIO_1[22]"
+    Warning (15610): No output dependent on input pin "GPIO_1[21]"
+    Warning (15610): No output dependent on input pin "GPIO_1[20]"
+    Warning (15610): No output dependent on input pin "GPIO_1[19]"
+    Warning (15610): No output dependent on input pin "GPIO_1[18]"
+    Warning (15610): No output dependent on input pin "GPIO_1[16]"
+    Warning (15610): No output dependent on input pin "GPIO_1[14]"
+    Warning (15610): No output dependent on input pin "GPIO_1[12]"
+    Warning (15610): No output dependent on input pin "GPIO_1[10]"
+    Warning (15610): No output dependent on input pin "GPIO_1[9]"
+    Warning (15610): No output dependent on input pin "GPIO_1[8]"
+    Warning (15610): No output dependent on input pin "GPIO_1[7]"
+    Warning (15610): No output dependent on input pin "GPIO_1[6]"
+    Warning (15610): No output dependent on input pin "GPIO_1[5]"
+    Warning (15610): No output dependent on input pin "GPIO_1[4]"
+    Warning (15610): No output dependent on input pin "GPIO_1[3]"
+    Warning (15610): No output dependent on input pin "GPIO_1[2]"
+    Warning (15610): No output dependent on input pin "GPIO_1[1]"
+    Warning (15610): No output dependent on input pin "GPIO_1[0]"
+Info (21057): Implemented 574 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 38 input pins
+    Info (21059): Implemented 57 output pins
+    Info (21061): Implemented 479 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 62 warnings
     Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Fri Jul  5 08:52:55 2019
+    Info: Processing ended: Wed Jul 10 23:19:46 2019
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 

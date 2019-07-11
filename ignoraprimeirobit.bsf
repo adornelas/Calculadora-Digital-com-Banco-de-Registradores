@@ -20,24 +20,24 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 160 112)
+	(rect 64 64 208 128)
 	(text "ignoraprimeirobit" (rect 5 0 102 12)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 82 25 92)(font "Arial" ))
+	(text "inst" (rect 8 48 25 58)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "In[3..0]" (rect 0 0 41 12)(font "Arial" (font_size 8)))
-		(text "In[3..0]" (rect 21 27 62 39)(font "Arial" (font_size 8)))
+		(text "In[7..0]" (rect 0 0 41 12)(font "Arial" (font_size 8)))
+		(text "In[7..0]" (rect 21 27 62 39)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 144 32)
 		(output)
-		(text "Out[3..0]" (rect 0 0 51 12)(font "Arial" (font_size 8)))
-		(text "Out[3..0]" (rect 72 27 123 39)(font "Arial" (font_size 8)))
+		(text "Out[7..0]" (rect 0 0 51 12)(font "Arial" (font_size 8)))
+		(text "Out[7..0]" (rect 72 27 123 39)(font "Arial" (font_size 8)))
 		(line (pt 144 32)(pt 128 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 128 80))
+		(rectangle (rect 16 16 128 48))
 	)
 )
