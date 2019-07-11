@@ -1,68 +1,16 @@
 
 State Machine - |Projeto|maquina:inst2|nextstate
-Name nextstate.ESPERA_IGUAL nextstate.ESPERA_SINAL nextstate.MOSTRA_RESULTADO nextstate.ESPERA_B6 nextstate.ENTRADA_B6 nextstate.ESPERA_B5 nextstate.ENTRADA_B5 nextstate.ESPERA_B4 nextstate.ENTRADA_B4 nextstate.ESPERA_B3 nextstate.ENTRADA_B3 nextstate.ESPERA_B2 nextstate.ENTRADA_B2 nextstate.ESPERA_B1 nextstate.ENTRADA_B1 nextstate.ESPERA_B0 nextstate.ENTRADA_B0 nextstate.ESPERA_A6 nextstate.ENTRADA_A6 nextstate.ESPERA_A5 nextstate.ENTRADA_A5 nextstate.ESPERA_A4 nextstate.ENTRADA_A4 nextstate.ESPERA_A3 nextstate.ENTRADA_A3 nextstate.ESPERA_A2 nextstate.ENTRADA_A2 nextstate.ESPERA_A1 nextstate.ENTRADA_A1 nextstate.ESPERA_A0 nextstate.ENTRADA_A0 
-nextstate.ENTRADA_A0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-nextstate.ESPERA_A0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-nextstate.ENTRADA_A1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-nextstate.ESPERA_A1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-nextstate.ENTRADA_A2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-nextstate.ESPERA_A2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-nextstate.ENTRADA_A3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-nextstate.ESPERA_A3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-nextstate.ENTRADA_A4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_A4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_A5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_A5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_A6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_A6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_B0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_B0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_B1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_B1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_B2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_B2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_B3 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_B3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_B4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_B4 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_B5 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_B5 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ENTRADA_B6 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_B6 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.MOSTRA_RESULTADO 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_SINAL 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-nextstate.ESPERA_IGUAL 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name nextstate.ESPERA_B0 nextstate.ENTRADA_B nextstate.ESPERA_A0 nextstate.ENTRADA_A nextstate.MOSTRA_RESULTADO 
+nextstate.ENTRADA_A 0 0 0 0 0 
+nextstate.ESPERA_A0 0 0 1 1 0 
+nextstate.ENTRADA_B 0 1 0 1 0 
+nextstate.ESPERA_B0 1 0 0 1 0 
+nextstate.MOSTRA_RESULTADO 0 0 0 1 1 
 
 State Machine - |Projeto|maquina:inst2|state
-Name state.ESPERA_IGUAL state.ESPERA_SINAL state.MOSTRA_RESULTADO state.ESPERA_B6 state.ENTRADA_B6 state.ESPERA_B5 state.ENTRADA_B5 state.ESPERA_B4 state.ENTRADA_B4 state.ESPERA_B3 state.ENTRADA_B3 state.ESPERA_B2 state.ENTRADA_B2 state.ESPERA_B1 state.ENTRADA_B1 state.ESPERA_B0 state.ENTRADA_B0 state.ESPERA_A6 state.ENTRADA_A6 state.ESPERA_A5 state.ENTRADA_A5 state.ESPERA_A4 state.ENTRADA_A4 state.ESPERA_A3 state.ENTRADA_A3 state.ESPERA_A2 state.ENTRADA_A2 state.ESPERA_A1 state.ENTRADA_A1 state.ESPERA_A0 state.ENTRADA_A0 
-state.ENTRADA_A0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-state.ESPERA_A0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-state.ENTRADA_A1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-state.ESPERA_A1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-state.ENTRADA_A2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-state.ESPERA_A2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-state.ENTRADA_A3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-state.ESPERA_A3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-state.ENTRADA_A4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-state.ESPERA_A4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_A5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_A5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_A6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_A6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_B0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_B0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_B1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_B1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_B2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_B2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_B3 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_B3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_B4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_B4 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_B5 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_B5 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ENTRADA_B6 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_B6 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.MOSTRA_RESULTADO 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_SINAL 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.ESPERA_IGUAL 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name state.ESPERA_B0 state.ENTRADA_B state.ESPERA_A0 state.ENTRADA_A state.MOSTRA_RESULTADO 
+state.ENTRADA_A 0 0 0 0 0 
+state.ESPERA_A0 0 0 1 1 0 
+state.ENTRADA_B 0 1 0 1 0 
+state.ESPERA_B0 1 0 0 1 0 
+state.MOSTRA_RESULTADO 0 0 0 1 1 
